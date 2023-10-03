@@ -50,8 +50,8 @@
         "dataType": "Coil",
         "adr": "0",
         "quantity": "1",
-        "rate": "1000",
-        "rateUnit": "ms",
+        "rate": "10",
+        "rateUnit": "s",
         "delayOnStart": false,
         "startDelayTime": "",
         "server": "bc1e134d11102e58",
@@ -63,7 +63,25 @@
         "y": 220,
         "wires": [
             [],
-            []
+            [
+                "941e345287f478ef"
+            ]
         ]
+    },
+    {
+        "id": "941e345287f478ef",
+        "type": "debug",
+        "z": "84a1a3d806bd7fe0",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 300,
+        "wires": []
     }
 ]
