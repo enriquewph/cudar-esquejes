@@ -62,26 +62,44 @@
         "x": 510,
         "y": 220,
         "wires": [
+            [],
             [
-                "7a38e30f960d1fee"
-            ],
+                "5f536b04c15fe370"
+            ]
+        ]
+    },
+    {
+        "id": "09ec900c53e5408e",
+        "type": "modbus-flex-getter",
+        "z": "84a1a3d806bd7fe0",
+        "name": "",
+        "showStatusActivities": false,
+        "showErrors": false,
+        "showWarnings": true,
+        "logIOActivities": false,
+        "server": "bc1e134d11102e58",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 430,
+        "y": 380,
+        "wires": [
+            [],
             []
         ]
     },
     {
-        "id": "7a38e30f960d1fee",
-        "type": "debug",
+        "id": "5f536b04c15fe370",
+        "type": "modbus-response",
         "z": "84a1a3d806bd7fe0",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 860,
-        "y": 220,
+        "name": "",
+        "registerShowMax": 20,
+        "x": 830,
+        "y": 320,
         "wires": []
     }
 ]
