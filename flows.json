@@ -65,29 +65,5 @@
             [],
             []
         ]
-    },
-    {
-        "id": "09ec900c53e5408e",
-        "type": "modbus-flex-getter",
-        "z": "84a1a3d806bd7fe0",
-        "name": "",
-        "showStatusActivities": false,
-        "showErrors": false,
-        "showWarnings": true,
-        "logIOActivities": false,
-        "server": "bc1e134d11102e58",
-        "useIOFile": false,
-        "ioFile": "",
-        "useIOForPayload": false,
-        "emptyMsgOnFail": false,
-        "keepMsgProperties": false,
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "x": 430,
-        "y": 380,
-        "wires": [
-            [],
-            []
-        ]
     }
 ]
