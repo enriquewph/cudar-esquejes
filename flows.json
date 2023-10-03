@@ -10,7 +10,6 @@
     {
         "id": "bc1e134d11102e58",
         "type": "modbus-client",
-        "d": true,
         "name": "USB-SERIAL",
         "clienttype": "serial",
         "bufferCommands": true,
