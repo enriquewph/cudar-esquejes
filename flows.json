@@ -63,9 +63,7 @@
         "y": 220,
         "wires": [
             [],
-            [
-                "5f536b04c15fe370"
-            ]
+            []
         ]
     },
     {
@@ -91,15 +89,5 @@
             [],
             []
         ]
-    },
-    {
-        "id": "5f536b04c15fe370",
-        "type": "modbus-response",
-        "z": "84a1a3d806bd7fe0",
-        "name": "",
-        "registerShowMax": 20,
-        "x": 830,
-        "y": 320,
-        "wires": []
     }
 ]
