@@ -40,6 +40,7 @@
         "id": "bd1a6966dd73f29b",
         "type": "modbus-read",
         "z": "84a1a3d806bd7fe0",
+        "d": true,
         "name": "",
         "topic": "",
         "showStatusActivities": true,
