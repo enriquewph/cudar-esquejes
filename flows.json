@@ -145,11 +145,11 @@
     {
         "id": "c371dadc8bcf8e88",
         "type": "ui_group",
-        "name": "Default",
+        "name": "Reproductor de Esquejes",
         "tab": "ed0368e98cc467de",
         "order": 1,
         "disp": true,
-        "width": "6",
+        "width": "20",
         "collapse": false,
         "className": ""
     },
