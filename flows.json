@@ -107,85 +107,37 @@
         "wires": []
     },
     {
-        "id": "6c65d46ea45ab6f1",
-        "type": "modbus-getter",
+        "id": "5fe32c791b57a02d",
+        "type": "modbus-read",
         "z": "84a1a3d806bd7fe0",
-        "name": "Leer Registros",
+        "name": "",
+        "topic": "",
         "showStatusActivities": true,
+        "logIOActivities": false,
         "showErrors": true,
         "showWarnings": true,
-        "logIOActivities": false,
         "unitid": "",
         "dataType": "HoldingRegister",
         "adr": "0",
         "quantity": "20",
+        "rate": "10",
+        "rateUnit": "s",
+        "delayOnStart": false,
+        "startDelayTime": "",
         "server": "bc1e134d11102e58",
         "useIOFile": false,
         "ioFile": "",
         "useIOForPayload": false,
-        "emptyMsgOnFail": true,
-        "keepMsgProperties": false,
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "x": 460,
-        "y": 220,
+        "emptyMsgOnFail": false,
+        "x": 310,
+        "y": 280,
         "wires": [
             [
                 "c22e1c7097d6bd03"
             ],
             [
-                "eefe72d8de19af9f",
-                "b35dd44add045e20"
-            ]
-        ]
-    },
-    {
-        "id": "557af5d310a10d41",
-        "type": "trigger",
-        "z": "84a1a3d806bd7fe0",
-        "name": "",
-        "op1": "1",
-        "op2": "0",
-        "op1type": "str",
-        "op2type": "str",
-        "duration": "-5",
-        "extend": false,
-        "overrideDelay": false,
-        "units": "min",
-        "reset": "",
-        "bytopic": "all",
-        "topic": "topic",
-        "outputs": 1,
-        "x": 170,
-        "y": 100,
-        "wires": [
-            [
-                "6c65d46ea45ab6f1"
-            ]
-        ]
-    },
-    {
-        "id": "a85e513498944ab0",
-        "type": "inject",
-        "z": "84a1a3d806bd7fe0",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "true",
-        "payloadType": "bool",
-        "x": 190,
-        "y": 280,
-        "wires": [
-            [
-                "6c65d46ea45ab6f1"
+                "b35dd44add045e20",
+                "eefe72d8de19af9f"
             ]
         ]
     }
