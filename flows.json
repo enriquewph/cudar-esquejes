@@ -37,41 +37,6 @@
         "showLogs": true
     },
     {
-        "id": "bd1a6966dd73f29b",
-        "type": "modbus-read",
-        "z": "84a1a3d806bd7fe0",
-        "name": "Leer registros",
-        "topic": "",
-        "showStatusActivities": true,
-        "logIOActivities": false,
-        "showErrors": true,
-        "showWarnings": true,
-        "unitid": "",
-        "dataType": "HoldingRegister",
-        "adr": "0",
-        "quantity": "20",
-        "rate": "5",
-        "rateUnit": "m",
-        "delayOnStart": false,
-        "startDelayTime": "",
-        "server": "bc1e134d11102e58",
-        "useIOFile": false,
-        "ioFile": "",
-        "useIOForPayload": false,
-        "emptyMsgOnFail": false,
-        "x": 510,
-        "y": 220,
-        "wires": [
-            [
-                "c22e1c7097d6bd03"
-            ],
-            [
-                "eefe72d8de19af9f",
-                "b35dd44add045e20"
-            ]
-        ]
-    },
-    {
         "id": "eefe72d8de19af9f",
         "type": "function",
         "z": "84a1a3d806bd7fe0",
@@ -140,5 +105,38 @@
         "x": 760,
         "y": 60,
         "wires": []
+    },
+    {
+        "id": "6c65d46ea45ab6f1",
+        "type": "modbus-getter",
+        "z": "84a1a3d806bd7fe0",
+        "name": "Leer Registros",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "showWarnings": true,
+        "logIOActivities": false,
+        "unitid": "",
+        "dataType": "HoldingRegister",
+        "adr": "0",
+        "quantity": "20",
+        "server": "bc1e134d11102e58",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": true,
+        "keepMsgProperties": false,
+        "delayOnStart": false,
+        "startDelayTime": "",
+        "x": 460,
+        "y": 220,
+        "wires": [
+            [
+                "c22e1c7097d6bd03"
+            ],
+            [
+                "eefe72d8de19af9f",
+                "b35dd44add045e20"
+            ]
+        ]
     }
 ]
