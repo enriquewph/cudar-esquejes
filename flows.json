@@ -74,7 +74,7 @@
         "type": "function",
         "z": "84a1a3d806bd7fe0",
         "name": "function 1",
-        "func": "node.log(\"info\");\n\nnode.log(msg);\n\nreturn msg;",
+        "func": "var newMsg = { payload: msg.payload }\n\nnode.error(newMsg);\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
