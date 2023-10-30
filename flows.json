@@ -166,25 +166,63 @@
         "x": 520,
         "y": 300,
         "wires": [
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            [],
-            []
+            [
+                "acc256c200ebe09b"
+            ],
+            [
+                "501daf8cb1689031"
+            ],
+            [
+                "e506e5a3c125556f"
+            ],
+            [
+                "c814f83a6d5ba4a0"
+            ],
+            [
+                "9c4d44102eafc76d"
+            ],
+            [
+                "73d450825d8c68b2"
+            ],
+            [
+                "501daf8cb1689031"
+            ],
+            [
+                "e506e5a3c125556f"
+            ],
+            [
+                "c814f83a6d5ba4a0"
+            ],
+            [
+                "9c4d44102eafc76d"
+            ],
+            [
+                "73d450825d8c68b2"
+            ],
+            [
+                "c814f83a6d5ba4a0"
+            ],
+            [
+                "9c4d44102eafc76d"
+            ],
+            [
+                "c5353f2ff03a99fc"
+            ],
+            [
+                "c814f83a6d5ba4a0"
+            ],
+            [
+                "237130adae08f666"
+            ],
+            [
+                "54a7d988b388d7fd"
+            ],
+            [
+                "274ba354eda38b20"
+            ],
+            [
+                "a5100213482133eb"
+            ]
         ],
         "inputLabels": [
             "ModbusData"
@@ -281,10 +319,427 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 990,
-        "y": 200,
+        "x": 930,
+        "y": 140,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "e506e5a3c125556f",
+        "type": "ui_chart",
+        "z": "84a1a3d806bd7fe0",
+        "name": "",
+        "group": "c371dadc8bcf8e88",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Humedades de Sustrato",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 930,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "73d450825d8c68b2",
+        "type": "ui_chart",
+        "z": "84a1a3d806bd7fe0",
+        "name": "",
+        "group": "c371dadc8bcf8e88",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Humedades de Foliage",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 930,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c814f83a6d5ba4a0",
+        "type": "ui_chart",
+        "z": "84a1a3d806bd7fe0",
+        "name": "",
+        "group": "c371dadc8bcf8e88",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Temperatura",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 890,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9c4d44102eafc76d",
+        "type": "ui_chart",
+        "z": "84a1a3d806bd7fe0",
+        "name": "",
+        "group": "c371dadc8bcf8e88",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Humedad",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 880,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "237130adae08f666",
+        "type": "ui_chart",
+        "z": "84a1a3d806bd7fe0",
+        "name": "",
+        "group": "c371dadc8bcf8e88",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Nivel de Agua",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 900,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c5353f2ff03a99fc",
+        "type": "ui_chart",
+        "z": "84a1a3d806bd7fe0",
+        "name": "",
+        "group": "c371dadc8bcf8e88",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Radiación Solar",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 900,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "274ba354eda38b20",
+        "type": "ui_chart",
+        "z": "84a1a3d806bd7fe0",
+        "name": "",
+        "group": "c371dadc8bcf8e88",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Corriente",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 880,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a5100213482133eb",
+        "type": "ui_chart",
+        "z": "84a1a3d806bd7fe0",
+        "name": "",
+        "group": "c371dadc8bcf8e88",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Voltaje",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 870,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "54a7d988b388d7fd",
+        "type": "ui_chart",
+        "z": "84a1a3d806bd7fe0",
+        "name": "",
+        "group": "c371dadc8bcf8e88",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Potencia",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 880,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "acc256c200ebe09b",
+        "type": "ui_text",
+        "z": "84a1a3d806bd7fe0",
+        "group": "c371dadc8bcf8e88",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Timestamp Ultima Muestra: ",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 940,
+        "y": 100,
+        "wires": []
     }
 ]
