@@ -156,8 +156,33 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 150,
-        "y": 220,
+        "x": 170,
+        "y": 100,
+        "wires": [
+            [
+                "6c65d46ea45ab6f1"
+            ]
+        ]
+    },
+    {
+        "id": "a85e513498944ab0",
+        "type": "inject",
+        "z": "84a1a3d806bd7fe0",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 190,
+        "y": 280,
         "wires": [
             [
                 "6c65d46ea45ab6f1"
