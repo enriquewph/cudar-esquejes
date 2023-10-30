@@ -64,8 +64,7 @@
         "wires": [
             [],
             [
-                "eefe72d8de19af9f",
-                "fb908caa00a627da"
+                "eefe72d8de19af9f"
             ]
         ]
     },
@@ -84,7 +83,9 @@
         "x": 760,
         "y": 220,
         "wires": [
-            []
+            [
+                "fb908caa00a627da"
+            ]
         ]
     },
     {
@@ -100,8 +101,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 780,
-        "y": 140,
+        "x": 1060,
+        "y": 180,
         "wires": []
     }
 ]
