@@ -132,7 +132,7 @@
             "dateFormat": "DD/MM/YYYY",
             "sizes": {
                 "sx": 48,
-                "sy": 12,
+                "sy": 24,
                 "gx": 6,
                 "gy": 6,
                 "cx": 6,
