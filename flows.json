@@ -20,7 +20,7 @@
         "tcpPort": "502",
         "tcpType": "DEFAULT",
         "serialPort": "/dev/ttyUSB0",
-        "serialType": "RTU",
+        "serialType": "RTU-BUFFERD",
         "serialBaudrate": "115200",
         "serialDatabits": "8",
         "serialStopbits": "1",
@@ -129,8 +129,8 @@
         "ioFile": "",
         "useIOForPayload": false,
         "emptyMsgOnFail": false,
-        "x": 310,
-        "y": 280,
+        "x": 490,
+        "y": 220,
         "wires": [
             [
                 "c22e1c7097d6bd03"
