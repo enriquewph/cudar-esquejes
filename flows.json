@@ -138,5 +138,30 @@
                 "b35dd44add045e20"
             ]
         ]
+    },
+    {
+        "id": "557af5d310a10d41",
+        "type": "trigger",
+        "z": "84a1a3d806bd7fe0",
+        "name": "",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "-5",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "min",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 150,
+        "y": 220,
+        "wires": [
+            [
+                "6c65d46ea45ab6f1"
+            ]
+        ]
     }
 ]
