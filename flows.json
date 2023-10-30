@@ -62,14 +62,33 @@
         "x": 510,
         "y": 220,
         "wires": [
+            [],
             [
-                "941e345287f478ef"
-            ],
+                "eefe72d8de19af9f",
+                "fb908caa00a627da"
+            ]
+        ]
+    },
+    {
+        "id": "eefe72d8de19af9f",
+        "type": "function",
+        "z": "84a1a3d806bd7fe0",
+        "name": "function 1",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 220,
+        "wires": [
             []
         ]
     },
     {
-        "id": "941e345287f478ef",
+        "id": "fb908caa00a627da",
         "type": "debug",
         "z": "84a1a3d806bd7fe0",
         "name": "debug 1",
@@ -77,12 +96,11 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
+        "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 920,
-        "y": 300,
+        "x": 780,
+        "y": 140,
         "wires": []
     }
 ]
