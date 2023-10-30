@@ -74,39 +74,6 @@
         "wires": []
     },
     {
-        "id": "b35dd44add045e20",
-        "type": "debug",
-        "z": "84a1a3d806bd7fe0",
-        "name": "debug 2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 800,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "c22e1c7097d6bd03",
-        "type": "debug",
-        "z": "84a1a3d806bd7fe0",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 760,
-        "y": 60,
-        "wires": []
-    },
-    {
         "id": "5fe32c791b57a02d",
         "type": "modbus-read",
         "z": "84a1a3d806bd7fe0",
@@ -132,11 +99,8 @@
         "x": 490,
         "y": 220,
         "wires": [
+            [],
             [
-                "c22e1c7097d6bd03"
-            ],
-            [
-                "b35dd44add045e20",
                 "eefe72d8de19af9f"
             ]
         ]
