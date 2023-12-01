@@ -154,6 +154,12 @@
         "className": ""
     },
     {
+        "id": "e06a744f44db421c",
+        "type": "sqlitedb",
+        "db": "/home/pi/esquejes.sqlite",
+        "mode": "RWC"
+    },
+    {
         "id": "eefe72d8de19af9f",
         "type": "function",
         "z": "84a1a3d806bd7fe0",
@@ -743,5 +749,19 @@
         "x": 940,
         "y": 100,
         "wires": []
+    },
+    {
+        "id": "6cc1ca9b64bc2025",
+        "type": "sqlite",
+        "z": "84a1a3d806bd7fe0",
+        "mydb": "e06a744f44db421c",
+        "sqlquery": "msg.topic",
+        "sql": "",
+        "name": "",
+        "x": 830,
+        "y": 600,
+        "wires": [
+            []
+        ]
     }
 ]
