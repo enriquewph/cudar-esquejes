@@ -175,6 +175,7 @@
         "y": 300,
         "wires": [
             [
+                "6cc1ca9b64bc2025",
                 "f056e80f0d654fd4"
             ]
         ],
@@ -200,7 +201,7 @@
         "adr": "0",
         "quantity": "20",
         "rate": "10",
-        "rateUnit": "s",
+        "rateUnit": "m",
         "delayOnStart": false,
         "startDelayTime": "",
         "server": "bc1e134d11102e58",
@@ -685,9 +686,9 @@
         "mydb": "e06a744f44db421c",
         "sqlquery": "msg.topic",
         "sql": "",
-        "name": "",
-        "x": 630,
-        "y": 160,
+        "name": "Insert into muestras",
+        "x": 550,
+        "y": 260,
         "wires": [
             []
         ]
@@ -705,8 +706,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 580,
-        "y": 320,
+        "x": 520,
+        "y": 340,
         "wires": []
     }
 ]
