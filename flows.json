@@ -174,7 +174,9 @@
         "x": 340,
         "y": 300,
         "wires": [
-            []
+            [
+                "f056e80f0d654fd4"
+            ]
         ],
         "inputLabels": [
             "ModbusData"
@@ -703,8 +705,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 520,
-        "y": 400,
+        "x": 640,
+        "y": 380,
         "wires": []
     }
 ]
