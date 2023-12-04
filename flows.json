@@ -171,7 +171,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 540,
+        "x": 340,
         "y": 300,
         "wires": [
             [
@@ -281,7 +281,7 @@
         "ioFile": "",
         "useIOForPayload": false,
         "emptyMsgOnFail": false,
-        "x": 310,
+        "x": 150,
         "y": 300,
         "wires": [
             [],
