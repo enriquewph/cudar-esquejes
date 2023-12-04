@@ -174,9 +174,7 @@
         "x": 340,
         "y": 300,
         "wires": [
-            [
-                "f056e80f0d654fd4"
-            ]
+            []
         ],
         "inputLabels": [
             "ModbusData"
