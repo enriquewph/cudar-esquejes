@@ -182,25 +182,7 @@
             "ModbusData"
         ],
         "outputLabels": [
-            "Timestamp",
-            "TempSustrato1",
-            "HumSustrato1",
-            "TempAmbiente1",
-            "HumAmbiente1",
-            "HumFol1",
-            "TempSustrato2",
-            "HumSustrato2",
-            "TempAmbiente2",
-            "HumAmbiente2",
-            "HumFol2",
-            "TempExterior",
-            "HumExterior",
-            "LuzExterior",
-            "TempAgua",
-            "NivelAgua",
-            "PotenciaConsumida",
-            "CorrienteConsumida",
-            "VoltajeConsumido"
+            "Timestamp"
         ]
     },
     {
@@ -719,7 +701,8 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "false",
+        "complete": "true",
+        "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
         "x": 520,
