@@ -171,18 +171,18 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 520,
+        "x": 540,
         "y": 300,
         "wires": [
             [
-                "acc256c200ebe09b",
-                "f056e80f0d654fd4"
+                "acc256c200ebe09b"
             ],
             [
                 "501daf8cb1689031"
             ],
             [
-                "e506e5a3c125556f"
+                "e506e5a3c125556f",
+                "f056e80f0d654fd4"
             ],
             [
                 "c814f83a6d5ba4a0"
