@@ -175,7 +175,8 @@
         "y": 300,
         "wires": [
             [
-                "6cc1ca9b64bc2025"
+                "6cc1ca9b64bc2025",
+                "95236063d080bb01"
             ]
         ],
         "inputLabels": [
@@ -687,8 +688,8 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "Insert into muestras",
-        "x": 810,
-        "y": 280,
+        "x": 590,
+        "y": 300,
         "wires": [
             []
         ]
@@ -719,8 +720,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 540,
-        "y": 460,
+        "x": 560,
+        "y": 360,
         "wires": []
     }
 ]
