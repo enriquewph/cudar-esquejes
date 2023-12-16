@@ -771,5 +771,31 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "ffab8b90d49c3fec",
+        "type": "ui_button",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "",
+        "group": "c371dadc8bcf8e88",
+        "order": 13,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "button",
+        "tooltip": "HOY",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "date",
+        "payload": "",
+        "payloadType": "date",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 370,
+        "y": 380,
+        "wires": [
+            []
+        ]
     }
 ]
