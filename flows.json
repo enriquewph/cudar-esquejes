@@ -731,5 +731,45 @@
         "wires": [
             []
         ]
+    },
+    {
+        "id": "5d94a31f5d93fab1",
+        "type": "ui_date_picker",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "",
+        "label": "Start",
+        "group": "c371dadc8bcf8e88",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 510,
+        "y": 340,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b1460d78fafba49c",
+        "type": "ui_date_picker",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "",
+        "label": "End",
+        "group": "c371dadc8bcf8e88",
+        "order": 12,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 510,
+        "y": 380,
+        "wires": [
+            []
+        ]
     }
 ]
