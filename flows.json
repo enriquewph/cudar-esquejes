@@ -135,8 +135,8 @@
             "name": "Dashboard CUDAR",
             "hideToolbar": "true",
             "allowSwipe": "false",
-            "lockMenu": "false",
-            "allowTempTheme": "true",
+            "lockMenu": "true",
+            "allowTempTheme": "none",
             "dateFormat": "DD/MM/YYYY",
             "sizes": {
                 "sx": 48,
