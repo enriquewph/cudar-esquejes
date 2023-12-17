@@ -157,7 +157,7 @@
         "tab": "ed0368e98cc467de",
         "order": 1,
         "disp": true,
-        "width": "3",
+        "width": "20",
         "collapse": false,
         "className": ""
     },
@@ -176,6 +176,15 @@
         "order": 14,
         "width": 1,
         "height": 1
+    },
+    {
+        "id": "a6925ddcbbfcdf06",
+        "type": "ui_group",
+        "name": "Group 2",
+        "tab": "ed0368e98cc467de",
+        "order": 2,
+        "disp": true,
+        "width": 6
     },
     {
         "id": "eefe72d8de19af9f",
