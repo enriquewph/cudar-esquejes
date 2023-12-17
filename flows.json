@@ -133,7 +133,7 @@
         },
         "site": {
             "name": "Dashboard CUDAR",
-            "hideToolbar": "true",
+            "hideToolbar": "false",
             "allowSwipe": "false",
             "lockMenu": "true",
             "allowTempTheme": "none",
