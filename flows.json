@@ -804,10 +804,10 @@
         "bgcolor": "",
         "className": "",
         "icon": "check",
-        "payload": "apply",
-        "payloadType": "str",
-        "topic": "topic",
-        "topicType": "msg",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "apply",
+        "topicType": "str",
         "x": 310,
         "y": 180,
         "wires": [
@@ -829,8 +829,8 @@
         "height": 2,
         "passthru": true,
         "decouple": "false",
-        "topic": "topic",
-        "topicType": "msg",
+        "topic": "update",
+        "topicType": "str",
         "style": "",
         "onvalue": "true",
         "onvalueType": "bool",
@@ -865,7 +865,9 @@
         "x": 620,
         "y": 240,
         "wires": [
-            []
+            [
+                "157ece44bb6785d6"
+            ]
         ]
     },
     {
@@ -939,5 +941,21 @@
                 "fca479973871e01a"
             ]
         ]
+    },
+    {
+        "id": "157ece44bb6785d6",
+        "type": "debug",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 240,
+        "wires": []
     }
 ]
