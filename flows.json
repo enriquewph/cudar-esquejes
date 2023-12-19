@@ -802,17 +802,18 @@
         "bgcolor": "",
         "className": "",
         "icon": "check",
-        "payload": "",
-        "payloadType": "date",
-        "topic": "topic",
-        "topicType": "msg",
+        "payload": "msg.complete",
+        "payloadType": "str",
+        "topic": "aplicar",
+        "topicType": "str",
         "x": 130,
         "y": 300,
         "wires": [
             [
                 "72c6dda5df6ceb7a",
                 "5d94a31f5d93fab1",
-                "b1460d78fafba49c"
+                "b1460d78fafba49c",
+                "67aef785948f3a55"
             ]
         ]
     },
@@ -935,6 +936,22 @@
         "statusType": "auto",
         "x": 600,
         "y": 360,
+        "wires": []
+    },
+    {
+        "id": "67aef785948f3a55",
+        "type": "debug",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 500,
+        "y": 240,
         "wires": []
     }
 ]
