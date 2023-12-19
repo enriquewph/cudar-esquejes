@@ -757,7 +757,7 @@
         "topicType": "str",
         "className": "",
         "x": 330,
-        "y": 220,
+        "y": 300,
         "wires": [
             [
                 "929d0c25cc30e2e7",
@@ -780,11 +780,11 @@
         "topicType": "str",
         "className": "",
         "x": 330,
-        "y": 400,
+        "y": 240,
         "wires": [
             [
                 "e75ea7d89e26bdec",
-                "21e05fd1630d9b4e"
+                "37fca0df5415a974"
             ]
         ]
     },
@@ -808,13 +808,11 @@
         "payloadType": "str",
         "topic": "topic",
         "topicType": "msg",
-        "x": 150,
-        "y": 140,
+        "x": 330,
+        "y": 180,
         "wires": [
             [
-                "37a4e4e30a07fa39",
-                "37fca0df5415a974",
-                "21e05fd1630d9b4e"
+                "37fca0df5415a974"
             ]
         ]
     },
@@ -844,8 +842,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 340,
-        "y": 80,
+        "x": 400,
+        "y": 360,
         "wires": [
             []
         ]
@@ -862,27 +860,11 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 340,
-        "y": 280,
+        "x": 600,
+        "y": 240,
         "wires": [
             []
         ]
-    },
-    {
-        "id": "37a4e4e30a07fa39",
-        "type": "debug",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "debug 3",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 620,
-        "y": 140,
-        "wires": []
     },
     {
         "id": "929d0c25cc30e2e7",
@@ -896,8 +878,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 620,
-        "y": 220,
+        "x": 600,
+        "y": 300,
         "wires": []
     },
     {
@@ -912,48 +894,33 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 620,
-        "y": 400,
+        "x": 600,
+        "y": 180,
         "wires": []
-    },
-    {
-        "id": "21e05fd1630d9b4e",
-        "type": "function",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "function 2",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 340,
-        "y": 460,
-        "wires": [
-            []
-        ]
     },
     {
         "id": "fca479973871e01a",
         "type": "function",
         "z": "e4bb5e0df95bd7f5",
         "name": "FirstStart",
-        "func": "// Código para obtener el timestamp actual al iniciar el tablero\nvar msg1 = {};\nvar now = new Date();\n\n// Ajustar a las 23:59:59\nnow.setHours(23);\nnow.setMinutes(59);\nnow.setSeconds(59);\n\nmsg1.topic = \"timestamp_actual\";\nmsg1.payload = now.getTime();\n\n// Código para obtener el timestamp de una semana atrás\nvar msg2 = {};\nvar unaSemanaAtras = new Date(Date.now() - (7 * 24 * 60 * 60 * 1000)); // Resta 7 días en milisegundos\n\n// Ajustar a las 00:00:01\nunaSemanaAtras.setHours(0);\nunaSemanaAtras.setMinutes(0);\nunaSemanaAtras.setSeconds(1);\n\nmsg2.topic = \"timestamp_semana_anterior\";\nmsg2.payload = unaSemanaAtras.getTime();\n\nreturn [msg1, msg2];\n",
-        "outputs": 2,
+        "func": "// Código para obtener el timestamp actual al iniciar el tablero\nvar msg1 = {};\nvar now = new Date();\n\n// Ajustar a las 23:59:59\nnow.setHours(23);\nnow.setMinutes(59);\nnow.setSeconds(59);\n\nmsg1.topic = \"timestamp_actual\";\nmsg1.payload = now.getTime();\n\n// Código para obtener el timestamp de una semana atrás\nvar msg2 = {};\nvar unaSemanaAtras = new Date(Date.now() - (7 * 24 * 60 * 60 * 1000)); // Resta 7 días en milisegundos\n\n// Ajustar a las 00:00:01\nunaSemanaAtras.setHours(0);\nunaSemanaAtras.setMinutes(0);\nunaSemanaAtras.setSeconds(1);\n\nmsg2.topic = \"timestamp_semana_anterior\";\nmsg2.payload = unaSemanaAtras.getTime();\n\nreturn [msg1, msg2, false];\n",
+        "outputs": 3,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 100,
-        "y": 340,
+        "x": 120,
+        "y": 240,
         "wires": [
             [
                 "b1460d78fafba49c"
             ],
             [
                 "5d94a31f5d93fab1"
+            ],
+            [
+                "91934db31193c495"
             ]
         ]
     },
@@ -964,7 +931,7 @@
         "name": "",
         "events": "connect",
         "x": 100,
-        "y": 420,
+        "y": 300,
         "wires": [
             [
                 "fca479973871e01a"
