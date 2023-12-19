@@ -844,8 +844,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 440,
-        "y": 560,
+        "x": 400,
+        "y": 60,
         "wires": [
             []
         ]
@@ -946,8 +946,8 @@
         "initialize": "// Código para obtener el timestamp actual al iniciar el tablero\nvar msg = {};\nmsg.topic = \"timestamp\";\nmsg.payload = Date.now();\n\nreturn msg;",
         "finalize": "",
         "libs": [],
-        "x": 140,
-        "y": 460,
+        "x": 340,
+        "y": 540,
         "wires": [
             [
                 "5551e2d2b71c1560"
@@ -967,37 +967,39 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 300,
-        "y": 520,
+        "x": 620,
+        "y": 540,
         "wires": []
     },
     {
-        "id": "c5722c192e1c2c98",
-        "type": "inject",
+        "id": "75402f9d3e67f280",
+        "type": "ui_ui_control",
         "z": "e4bb5e0df95bd7f5",
         "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 100,
-        "y": 380,
+        "events": "connect",
+        "x": 140,
+        "y": 540,
         "wires": [
             [
-                "fca479973871e01a"
+                "fca479973871e01a",
+                "199ff676c1f6124d"
             ]
         ]
+    },
+    {
+        "id": "199ff676c1f6124d",
+        "type": "debug",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 580,
+        "wires": []
     }
 ]
