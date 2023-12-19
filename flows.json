@@ -943,7 +943,7 @@
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
-        "initialize": "// Código para obtener el timestamp actual al iniciar el tablero\nconst timestampActual = Date.now();\nconsole.log(\"Timestamp actual al iniciar el tablero:\", timestampActual);\n\nreturn timestampActual;",
+        "initialize": "// Código para obtener el timestamp actual al iniciar el tablero\nconst timestampActual = Date.now();\nconsole.log(\"Timestamp actual al iniciar el tablero:\", timestampActual);\n\n\nreturn timestampActual;",
         "finalize": "",
         "libs": [],
         "x": 100,
