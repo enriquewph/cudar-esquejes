@@ -943,7 +943,7 @@
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
-        "initialize": "// Código para obtener el timestamp actual al iniciar el tablero\nmsg.topic = \"timestamp\";\nmsg.payload = Date.now();\n\nreturn msg;",
+        "initialize": "// Código para obtener el timestamp actual al iniciar el tablero\nvar msg = {};\nmsg.topic = \"timestamp\";\nmsg.payload = Date.now();\n\nreturn msg;",
         "finalize": "",
         "libs": [],
         "x": 100,
