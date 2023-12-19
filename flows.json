@@ -305,7 +305,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 980,
+        "x": 1200,
         "y": 160,
         "wires": [
             []
@@ -349,7 +349,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 990,
+        "x": 1210,
         "y": 200,
         "wires": [
             []
@@ -393,7 +393,7 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 980,
+        "x": 1200,
         "y": 240,
         "wires": [
             []
@@ -411,7 +411,7 @@
         "label": "Temperatura ºC",
         "chartType": "line",
         "legend": "false",
-        "xformat": "HH:mm:ss",
+        "xformat": "dd HH:mm",
         "interpolate": "linear",
         "nodata": "",
         "dot": false,
@@ -437,8 +437,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 940,
-        "y": 280,
+        "x": 820,
+        "y": 320,
         "wires": [
             []
         ]
@@ -481,8 +481,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 940,
-        "y": 320,
+        "x": 1160,
+        "y": 280,
         "wires": [
             []
         ]
@@ -525,8 +525,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 940,
-        "y": 360,
+        "x": 1160,
+        "y": 320,
         "wires": [
             []
         ]
@@ -569,8 +569,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 970,
-        "y": 400,
+        "x": 1190,
+        "y": 360,
         "wires": [
             []
         ]
@@ -613,8 +613,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 930,
-        "y": 440,
+        "x": 1150,
+        "y": 400,
         "wires": [
             []
         ]
@@ -657,8 +657,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 920,
-        "y": 480,
+        "x": 1140,
+        "y": 440,
         "wires": [
             []
         ]
@@ -701,8 +701,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 930,
-        "y": 520,
+        "x": 1150,
+        "y": 480,
         "wires": [
             []
         ]
@@ -724,8 +724,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 980,
-        "y": 120,
+        "x": 860,
+        "y": 280,
         "wires": []
     },
     {
@@ -736,8 +736,8 @@
         "sqlquery": "fixed",
         "sql": "",
         "name": "Read Muestras",
-        "x": 540,
-        "y": 240,
+        "x": 500,
+        "y": 540,
         "wires": [
             []
         ]
@@ -747,7 +747,7 @@
         "type": "ui_date_picker",
         "z": "e4bb5e0df95bd7f5",
         "name": "",
-        "label": "Start",
+        "label": "Desde",
         "group": "c371dadc8bcf8e88",
         "order": 1,
         "width": 6,
@@ -756,10 +756,12 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 510,
-        "y": 340,
+        "x": 310,
+        "y": 360,
         "wires": [
-            []
+            [
+                "72c6dda5df6ceb7a"
+            ]
         ]
     },
     {
@@ -767,7 +769,7 @@
         "type": "ui_date_picker",
         "z": "e4bb5e0df95bd7f5",
         "name": "",
-        "label": "End",
+        "label": "Hasta",
         "group": "c371dadc8bcf8e88",
         "order": 5,
         "width": 6,
@@ -776,10 +778,12 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 510,
-        "y": 380,
+        "x": 310,
+        "y": 400,
         "wires": [
-            []
+            [
+                "72c6dda5df6ceb7a"
+            ]
         ]
     },
     {
@@ -802,10 +806,14 @@
         "payloadType": "date",
         "topic": "topic",
         "topicType": "msg",
-        "x": 370,
-        "y": 380,
+        "x": 130,
+        "y": 300,
         "wires": [
-            []
+            [
+                "72c6dda5df6ceb7a",
+                "5d94a31f5d93fab1",
+                "b1460d78fafba49c"
+            ]
         ]
     },
     {
@@ -834,10 +842,99 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 520,
-        "y": 440,
+        "x": 300,
+        "y": 480,
         "wires": [
             []
         ]
+    },
+    {
+        "id": "95ef588c38280d32",
+        "type": "inject",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 300,
+        "y": 160,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "37fca0df5415a974",
+        "type": "function",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "function 1",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "72c6dda5df6ceb7a",
+        "type": "join",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 470,
+        "y": 300,
+        "wires": [
+            [
+                "37a4e4e30a07fa39"
+            ]
+        ]
+    },
+    {
+        "id": "37a4e4e30a07fa39",
+        "type": "debug",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 400,
+        "wires": []
     }
 ]
