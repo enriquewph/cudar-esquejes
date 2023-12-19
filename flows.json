@@ -901,8 +901,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 800,
-        "y": 240,
+        "x": 660,
+        "y": 280,
         "wires": []
     },
     {
@@ -910,15 +910,15 @@
         "type": "function",
         "z": "e4bb5e0df95bd7f5",
         "name": "function 1",
-        "func": "\nreturn msg;",
+        "func": "// Nodo para procesar y almacenar entradas\nvar desdeTimestamp = null;\nvar hastaTimestamp = null;\nvar updateBoolean = null;\n\n// Manejar las entradas\nif (msg.topic === \"desde\") {\n    desdeTimestamp = msg.payload;\n} else if (msg.topic === \"hasta\") {\n    hastaTimestamp = msg.payload;\n} else if (msg.topic === \"update\") {\n    updateBoolean = msg.payload;\n}\n\n// Nodo para combinar y enviar el mensaje\nif (msg.topic === \"apply\") {\n    // Combinar y enviar el mensaje\n    var combinedMsg = {\n        topic: \"combined_result\",\n        payload: {\n            desde: desdeTimestamp,\n            hasta: hastaTimestamp,\n            update: updateBoolean\n        }\n    };\n\n    return combinedMsg;\n} else {\n    return null; // No hacer nada si no es \"apply\"\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
-        "y": 240,
+        "x": 500,
+        "y": 280,
         "wires": [
             [
                 "157ece44bb6785d6"
