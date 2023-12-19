@@ -963,8 +963,8 @@
         "tosidebar": true,
         "console": false,
         "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
+        "complete": "payload",
+        "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
         "x": 300,
@@ -992,8 +992,8 @@
         "topic": "",
         "payload": "",
         "payloadType": "date",
-        "x": 60,
-        "y": 400,
+        "x": 100,
+        "y": 380,
         "wires": [
             [
                 "fca479973871e01a"
