@@ -194,7 +194,8 @@
         "wires": [
             [
                 "6cc1ca9b64bc2025",
-                "95236063d080bb01"
+                "95236063d080bb01",
+                "923ddfc98c95b421"
             ]
         ],
         "inputLabels": [
@@ -265,6 +266,19 @@
         "statusType": "auto",
         "x": 560,
         "y": 360,
+        "wires": []
+    },
+    {
+        "id": "923ddfc98c95b421",
+        "type": "link out",
+        "z": "84a1a3d806bd7fe0",
+        "name": "NuevaMuestra",
+        "mode": "link",
+        "links": [
+            "57cb7f364509d9f5"
+        ],
+        "x": 565,
+        "y": 180,
         "wires": []
     },
     {
@@ -437,8 +451,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1120,
-        "y": 580,
+        "x": 1300,
+        "y": 400,
         "wires": [
             []
         ]
@@ -724,8 +738,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1160,
-        "y": 540,
+        "x": 1340,
+        "y": 360,
         "wires": []
     },
     {
@@ -736,8 +750,8 @@
         "sqlquery": "fixed",
         "sql": "",
         "name": "Read Muestras",
-        "x": 1060,
-        "y": 640,
+        "x": 960,
+        "y": 420,
         "wires": [
             []
         ]
@@ -958,12 +972,77 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 740,
+        "x": 720,
         "y": 280,
         "wires": [
             [
                 "157ece44bb6785d6"
             ]
+        ]
+    },
+    {
+        "id": "57cb7f364509d9f5",
+        "type": "link in",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "NuevaMuestra",
+        "links": [
+            "923ddfc98c95b421"
+        ],
+        "x": 155,
+        "y": 620,
+        "wires": [
+            [
+                "aad7034baa4fbee6"
+            ]
+        ]
+    },
+    {
+        "id": "aad7034baa4fbee6",
+        "type": "delay",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 280,
+        "y": 620,
+        "wires": [
+            [
+                "1be51efc78560a53"
+            ]
+        ]
+    },
+    {
+        "id": "1be51efc78560a53",
+        "type": "trigger",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "",
+        "op1": "",
+        "op2": "true",
+        "op1type": "date",
+        "op2type": "bool",
+        "duration": "250",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 2,
+        "x": 480,
+        "y": 620,
+        "wires": [
+            [],
+            []
         ]
     }
 ]
