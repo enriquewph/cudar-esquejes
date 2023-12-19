@@ -938,7 +938,7 @@
         "id": "fca479973871e01a",
         "type": "function",
         "z": "e4bb5e0df95bd7f5",
-        "name": "function 3",
+        "name": "FirstStart",
         "func": "// Código para obtener el timestamp actual al iniciar el tablero\nvar msg1 = {};\nmsg1.topic = \"timestamp_actual\";\nmsg1.payload = Date.now();\n\n// Código para obtener el timestamp de una semana atrás\nvar msg2 = {};\nmsg2.topic = \"timestamp_semana_anterior\";\nmsg2.payload = Date.now() - (7 * 24 * 60 * 60 * 1000); // Resta 7 días en milisegundos\n\nreturn [msg1, msg2];\n",
         "outputs": 2,
         "timeout": 0,
@@ -946,33 +946,16 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 200,
-        "y": 540,
+        "x": 100,
+        "y": 340,
         "wires": [
             [
-                "5551e2d2b71c1560"
+                "b1460d78fafba49c"
             ],
             [
-                "31f453714cf62fe4"
+                "5d94a31f5d93fab1"
             ]
         ]
-    },
-    {
-        "id": "5551e2d2b71c1560",
-        "type": "debug",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 620,
-        "y": 520,
-        "wires": []
     },
     {
         "id": "75402f9d3e67f280",
@@ -980,28 +963,12 @@
         "z": "e4bb5e0df95bd7f5",
         "name": "",
         "events": "connect",
-        "x": 60,
-        "y": 540,
+        "x": 100,
+        "y": 420,
         "wires": [
             [
                 "fca479973871e01a"
             ]
         ]
-    },
-    {
-        "id": "31f453714cf62fe4",
-        "type": "debug",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "debug 7",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 620,
-        "y": 580,
-        "wires": []
     }
 ]
