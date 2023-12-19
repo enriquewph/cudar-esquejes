@@ -807,7 +807,7 @@
         "topic": "apply",
         "topicType": "str",
         "x": 310,
-        "y": 140,
+        "y": 180,
         "wires": [
             [
                 "44afbffb25d126bf"
@@ -909,15 +909,15 @@
         "id": "44afbffb25d126bf",
         "type": "function",
         "z": "e4bb5e0df95bd7f5",
-        "name": "function 1",
-        "func": "// Obtener el contexto global\nvar contextoGlobal = global.get(\"contextoGlobal\") || {};\n\n// Nodo para procesar y almacenar entradas\nif (msg.topic === \"desde\") {\n    contextoGlobal.desdeTimestamp = msg.payload;\n} else if (msg.topic === \"hasta\") {\n    contextoGlobal.hastaTimestamp = msg.payload;\n} else if (msg.topic === \"update\") {\n    contextoGlobal.updateBoolean = msg.payload;\n} else if (msg.topic === \"apply\") {\n    // Combinar y enviar el mensaje\n    var combinedMsg = {\n        topic: \"combined_result\",\n        payload: {\n            desde: contextoGlobal.desdeTimestamp,\n            hasta: contextoGlobal.hastaTimestamp,\n            update: contextoGlobal.updateBoolean\n        }\n    };\n    \n    return combinedMsg;\n}\n\n// Guardar el contexto global\nglobal.set(\"contextoGlobal\", contextoGlobal);\n\nreturn null; // No hacer nada si no es \"apply\"\n",
+        "name": "Hold & Send",
+        "func": "// Obtener el contexto global\nvar contextoGlobal = global.get(\"contextoGlobal\") || {};\n\n// Nodo para procesar y almacenar entradas\nif (msg.topic === \"desde\") {\n    contextoGlobal.desdeTimestamp = msg.payload;\n} else if (msg.topic === \"hasta\") {\n    contextoGlobal.hastaTimestamp = msg.payload;\n} else if (msg.topic === \"update\") {\n    contextoGlobal.updateBoolean = msg.payload;\n} else if (msg.topic === \"apply\") {\n    // Combinar y enviar el mensaje\n    var combinedMsg = {\n        topic: \"mostrar\",\n        payload: {\n            desde: contextoGlobal.desdeTimestamp,\n            hasta: contextoGlobal.hastaTimestamp,\n            update: contextoGlobal.updateBoolean\n        }\n    };\n    \n    return combinedMsg;\n}\n\n// Guardar el contexto global\nglobal.set(\"contextoGlobal\", contextoGlobal);\n\nreturn null; // No hacer nada si no es \"apply\"\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 500,
+        "x": 510,
         "y": 280,
         "wires": [
             [
