@@ -761,7 +761,7 @@
         "wires": [
             [
                 "929d0c25cc30e2e7",
-                "37fca0df5415a974"
+                "a1fd7baf32c920b7"
             ]
         ]
     },
@@ -784,7 +784,7 @@
         "wires": [
             [
                 "e75ea7d89e26bdec",
-                "37fca0df5415a974"
+                "a1fd7baf32c920b7"
             ]
         ]
     },
@@ -812,7 +812,7 @@
         "y": 180,
         "wires": [
             [
-                "37fca0df5415a974"
+                "a1fd7baf32c920b7"
             ]
         ]
     },
@@ -846,27 +846,7 @@
         "y": 360,
         "wires": [
             [
-                "37fca0df5415a974"
-            ]
-        ]
-    },
-    {
-        "id": "37fca0df5415a974",
-        "type": "function",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "function 1",
-        "func": "\nreturn msg;",
-        "outputs": 1,
-        "timeout": 0,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 620,
-        "y": 240,
-        "wires": [
-            [
-                "157ece44bb6785d6"
+                "a1fd7baf32c920b7"
             ]
         ]
     },
@@ -957,5 +937,33 @@
         "x": 800,
         "y": 240,
         "wires": []
+    },
+    {
+        "id": "a1fd7baf32c920b7",
+        "type": "join",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "",
+        "mode": "custom",
+        "build": "object",
+        "property": "",
+        "propertyType": "full",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": true,
+        "timeout": "",
+        "count": "4",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 610,
+        "y": 240,
+        "wires": [
+            [
+                "157ece44bb6785d6"
+            ]
+        ]
     }
 ]
