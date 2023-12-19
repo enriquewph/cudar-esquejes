@@ -939,7 +939,7 @@
         "type": "function",
         "z": "e4bb5e0df95bd7f5",
         "name": "FirstStart",
-        "func": "// Código para obtener el timestamp actual al iniciar el tablero\nvar msg1 = {};\nmsg1.topic = \"timestamp_actual\";\nmsg1.payload = Date.now();\n\n// Código para obtener el timestamp de una semana atrás\nvar msg2 = {};\nmsg2.topic = \"timestamp_semana_anterior\";\nmsg2.payload = Date.now() - (7 * 24 * 60 * 60 * 1000); // Resta 7 días en milisegundos\n\nreturn [msg1, msg2];\n",
+        "func": "// Código para obtener el timestamp actual al iniciar el tablero\nvar msg1 = {};\nvar now = new Date();\n\n// Ajustar a las 23:59:59\nnow.setHours(23);\nnow.setMinutes(59);\nnow.setSeconds(59);\n\nmsg1.topic = \"timestamp_actual\";\nmsg1.payload = now.getTime();\n\n// Código para obtener el timestamp de una semana atrás\nvar msg2 = {};\nvar unaSemanaAtras = new Date(Date.now() - (7 * 24 * 60 * 60 * 1000)); // Resta 7 días en milisegundos\n\n// Ajustar a las 00:00:01\nunaSemanaAtras.setHours(0);\nunaSemanaAtras.setMinutes(0);\nunaSemanaAtras.setSeconds(1);\n\nmsg2.topic = \"timestamp_semana_anterior\";\nmsg2.payload = unaSemanaAtras.getTime();\n\nreturn [msg1, msg2];\n",
         "outputs": 2,
         "timeout": 0,
         "noerr": 0,
