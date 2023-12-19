@@ -940,15 +940,18 @@
         "z": "e4bb5e0df95bd7f5",
         "name": "function 3",
         "func": "// Código para obtener el timestamp actual al iniciar el tablero\nvar msg = {};\nmsg.topic = \"timestamp\";\nmsg.payload = Date.now();\n\nreturn msg;",
-        "outputs": 1,
+        "outputs": 2,
         "timeout": 0,
         "noerr": 0,
-        "initialize": "// Código para obtener el timestamp actual al iniciar el tablero\nvar msg = {};\nmsg.topic = \"timestamp\";\nmsg.payload = Date.now();\n\nreturn msg;",
+        "initialize": "// Código para obtener el timestamp actual al iniciar el tablero\nvar msg1 = {};\nmsg1.topic = \"timestamp_actual\";\nmsg1.payload = Date.now();\n\n// Código para obtener el timestamp de una semana atrás\nvar msg2 = {};\nmsg2.topic = \"timestamp_semana_anterior\";\nmsg2.payload = Date.now() - (7 * 24 * 60 * 60 * 1000); // Resta 7 días en milisegundos\n\nreturn [msg1, msg2];\n",
         "finalize": "",
         "libs": [],
-        "x": 340,
+        "x": 200,
         "y": 540,
         "wires": [
+            [
+                "5551e2d2b71c1560"
+            ],
             [
                 "5551e2d2b71c1560"
             ]
@@ -977,29 +980,12 @@
         "z": "e4bb5e0df95bd7f5",
         "name": "",
         "events": "connect",
-        "x": 140,
+        "x": 60,
         "y": 540,
         "wires": [
             [
-                "fca479973871e01a",
-                "199ff676c1f6124d"
+                "fca479973871e01a"
             ]
         ]
-    },
-    {
-        "id": "199ff676c1f6124d",
-        "type": "debug",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "debug 7",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 360,
-        "y": 580,
-        "wires": []
     }
 ]
