@@ -887,8 +887,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 620,
-        "y": 300,
+        "x": 720,
+        "y": 140,
         "wires": [
             []
         ]
@@ -933,8 +933,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 660,
-        "y": 400,
+        "x": 600,
+        "y": 360,
         "wires": []
     }
 ]
