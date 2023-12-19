@@ -939,15 +939,15 @@
         "type": "function",
         "z": "e4bb5e0df95bd7f5",
         "name": "function 3",
-        "func": "\nreturn msg;",
+        "func": "// Código para obtener el timestamp actual al iniciar el tablero\nvar msg = {};\nmsg.topic = \"timestamp\";\nmsg.payload = Date.now();\n\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
         "initialize": "// Código para obtener el timestamp actual al iniciar el tablero\nvar msg = {};\nmsg.topic = \"timestamp\";\nmsg.payload = Date.now();\n\nreturn msg;",
         "finalize": "",
         "libs": [],
-        "x": 100,
-        "y": 400,
+        "x": 140,
+        "y": 460,
         "wires": [
             [
                 "5551e2d2b71c1560"
@@ -970,5 +970,34 @@
         "x": 300,
         "y": 520,
         "wires": []
+    },
+    {
+        "id": "c5722c192e1c2c98",
+        "type": "inject",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 60,
+        "y": 400,
+        "wires": [
+            [
+                "fca479973871e01a"
+            ]
+        ]
     }
 ]
