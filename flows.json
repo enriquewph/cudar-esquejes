@@ -305,8 +305,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1200,
-        "y": 160,
+        "x": 1340,
+        "y": 440,
         "wires": [
             []
         ]
@@ -349,8 +349,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1210,
-        "y": 200,
+        "x": 1350,
+        "y": 480,
         "wires": [
             []
         ]
@@ -393,8 +393,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1200,
-        "y": 240,
+        "x": 1340,
+        "y": 520,
         "wires": [
             []
         ]
@@ -437,8 +437,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 980,
-        "y": 300,
+        "x": 1120,
+        "y": 580,
         "wires": [
             []
         ]
@@ -481,8 +481,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1160,
-        "y": 280,
+        "x": 1300,
+        "y": 560,
         "wires": [
             []
         ]
@@ -525,8 +525,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1160,
-        "y": 320,
+        "x": 1300,
+        "y": 600,
         "wires": [
             []
         ]
@@ -569,8 +569,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1190,
-        "y": 360,
+        "x": 1330,
+        "y": 640,
         "wires": [
             []
         ]
@@ -613,8 +613,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1150,
-        "y": 400,
+        "x": 1290,
+        "y": 680,
         "wires": [
             []
         ]
@@ -657,8 +657,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1140,
-        "y": 440,
+        "x": 1280,
+        "y": 720,
         "wires": [
             []
         ]
@@ -701,8 +701,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1150,
-        "y": 480,
+        "x": 1290,
+        "y": 760,
         "wires": [
             []
         ]
@@ -724,8 +724,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1020,
-        "y": 260,
+        "x": 1160,
+        "y": 540,
         "wires": []
     },
     {
@@ -736,8 +736,8 @@
         "sqlquery": "fixed",
         "sql": "",
         "name": "Read Muestras",
-        "x": 920,
-        "y": 360,
+        "x": 1060,
+        "y": 640,
         "wires": [
             []
         ]
@@ -807,7 +807,7 @@
         "topic": "apply",
         "topicType": "str",
         "x": 310,
-        "y": 180,
+        "y": 360,
         "wires": [
             [
                 "44afbffb25d126bf"
@@ -841,7 +841,7 @@
         "animate": false,
         "className": "",
         "x": 380,
-        "y": 360,
+        "y": 420,
         "wires": [
             [
                 "44afbffb25d126bf"
@@ -901,7 +901,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 660,
+        "x": 940,
         "y": 280,
         "wires": []
     },
@@ -910,7 +910,7 @@
         "type": "function",
         "z": "e4bb5e0df95bd7f5",
         "name": "Hold & Send",
-        "func": "// Obtener el contexto global\nvar contextoGlobal = global.get(\"contextoGlobal\") || {};\n\n// Nodo para procesar y almacenar entradas\nif (msg.topic === \"desde\") {\n    contextoGlobal.desdeTimestamp = msg.payload;\n} else if (msg.topic === \"hasta\") {\n    contextoGlobal.hastaTimestamp = msg.payload;\n} else if (msg.topic === \"update\") {\n    contextoGlobal.updateBoolean = msg.payload;\n} else if (msg.topic === \"apply\") {\n    // Combinar y enviar el mensaje\n    var combinedMsg = {\n        topic: \"mostrar\",\n        payload: {\n            desde: contextoGlobal.desdeTimestamp,\n            hasta: contextoGlobal.hastaTimestamp,\n            update: contextoGlobal.updateBoolean\n        }\n    };\n    \n    return combinedMsg;\n}\n\n// Guardar el contexto global\nglobal.set(\"contextoGlobal\", contextoGlobal);\n\nreturn null; // No hacer nada si no es \"apply\"\n",
+        "func": "// Obtener el contexto global\nvar contextoGlobal = global.get(\"contextoGlobal\") || {};\n\nvar return_date = false;\n\n// Nodo para procesar y almacenar entradas\nif (msg.topic === \"desde\") {\n    contextoGlobal.desdeTimestamp = msg.payload;\n} else if (msg.topic === \"hasta\") {\n    contextoGlobal.hastaTimestamp = msg.payload;\n} else if (msg.topic === \"update\") {\n    contextoGlobal.updateBoolean = msg.payload;\n    if (msg.payload === true) {\n        return_date = true;\n    }\n} else if (msg.topic === \"apply\") {\n    // Combinar y enviar el mensaje\n    var combinedMsg = {\n        topic: \"mostrar\",\n        payload: {\n            desde: contextoGlobal.desdeTimestamp,\n            hasta: contextoGlobal.hastaTimestamp,\n            update: contextoGlobal.updateBoolean\n        }\n    };\n    \n    return combinedMsg;\n}\n\n// Guardar el contexto global\nglobal.set(\"contextoGlobal\", contextoGlobal);\n\nif (return_date) {\n    var ret = {};\n    ret.topic = \"hasta\";\n    ret.payload = Date.now();\n    return ret;\n}\n\nreturn null; // No hacer nada si no es \"apply\"\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -918,6 +918,47 @@
         "finalize": "",
         "libs": [],
         "x": 510,
+        "y": 280,
+        "wires": [
+            [
+                "f7837ebcca8ba7c7",
+                "358044cf51c8b7d8"
+            ]
+        ]
+    },
+    {
+        "id": "f7837ebcca8ba7c7",
+        "type": "function",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "Filtrar: Hasta",
+        "func": "// Verificar si el mensaje cumple con la condición\nif (msg.topic === \"hasta\") {\n    return msg;\n} else {\n    return null; // Descartar mensajes con otros temas\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 110,
+        "y": 120,
+        "wires": [
+            [
+                "b1460d78fafba49c"
+            ]
+        ]
+    },
+    {
+        "id": "358044cf51c8b7d8",
+        "type": "function",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "Filtrar: mostrar",
+        "func": "// Verificar si el mensaje cumple con la condición\nif (msg.topic === \"mostrar\") {\n    return msg;\n} else {\n    return null; // Descartar mensajes con otros temas\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
         "y": 280,
         "wires": [
             [
