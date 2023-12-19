@@ -911,7 +911,7 @@
         "reduceRight": false,
         "reduceExp": "",
         "reduceInit": "",
-        "reduceInitType": "",
+        "reduceInitType": "num",
         "reduceFixup": "",
         "x": 470,
         "y": 300,
