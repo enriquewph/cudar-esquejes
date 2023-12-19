@@ -437,8 +437,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 820,
-        "y": 320,
+        "x": 980,
+        "y": 300,
         "wires": [
             []
         ]
@@ -724,8 +724,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 860,
-        "y": 280,
+        "x": 1020,
+        "y": 260,
         "wires": []
     },
     {
@@ -736,8 +736,8 @@
         "sqlquery": "fixed",
         "sql": "",
         "name": "Read Muestras",
-        "x": 500,
-        "y": 540,
+        "x": 920,
+        "y": 360,
         "wires": [
             []
         ]
@@ -756,11 +756,12 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 290,
-        "y": 360,
+        "x": 330,
+        "y": 220,
         "wires": [
             [
-                "929d0c25cc30e2e7"
+                "929d0c25cc30e2e7",
+                "37fca0df5415a974"
             ]
         ]
     },
@@ -778,11 +779,12 @@
         "topic": "topic",
         "topicType": "msg",
         "className": "",
-        "x": 290,
+        "x": 330,
         "y": 400,
         "wires": [
             [
-                "e75ea7d89e26bdec"
+                "e75ea7d89e26bdec",
+                "21e05fd1630d9b4e"
             ]
         ]
     },
@@ -802,17 +804,17 @@
         "bgcolor": "",
         "className": "",
         "icon": "check",
-        "payload": "msg.complete",
+        "payload": "apply",
         "payloadType": "str",
-        "topic": "aplicar",
-        "topicType": "str",
-        "x": 110,
-        "y": 300,
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 150,
+        "y": 140,
         "wires": [
             [
-                "5d94a31f5d93fab1",
-                "b1460d78fafba49c",
-                "37a4e4e30a07fa39"
+                "37a4e4e30a07fa39",
+                "37fca0df5415a974",
+                "21e05fd1630d9b4e"
             ]
         ]
     },
@@ -842,35 +844,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 300,
-        "y": 480,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "95ef588c38280d32",
-        "type": "inject",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "",
-        "props": [
-            {
-                "p": "payload"
-            },
-            {
-                "p": "topic",
-                "vt": "str"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 300,
-        "y": 160,
+        "x": 440,
+        "y": 560,
         "wires": [
             []
         ]
@@ -887,8 +862,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 720,
-        "y": 140,
+        "x": 340,
+        "y": 280,
         "wires": [
             []
         ]
@@ -905,8 +880,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 460,
-        "y": 280,
+        "x": 620,
+        "y": 140,
         "wires": []
     },
     {
@@ -921,8 +896,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 460,
-        "y": 320,
+        "x": 620,
+        "y": 220,
         "wires": []
     },
     {
@@ -937,8 +912,62 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 460,
-        "y": 360,
+        "x": 620,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "21e05fd1630d9b4e",
+        "type": "function",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "function 2",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fca479973871e01a",
+        "type": "function",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "function 3",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "// Código para obtener el timestamp actual al iniciar el tablero\nconst timestampActual = Date.now();\nconsole.log(\"Timestamp actual al iniciar el tablero:\", timestampActual);\n\nreturn timestampActual;",
+        "finalize": "",
+        "libs": [],
+        "x": 100,
+        "y": 400,
+        "wires": [
+            [
+                "5551e2d2b71c1560"
+            ]
+        ]
+    },
+    {
+        "id": "5551e2d2b71c1560",
+        "type": "debug",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 300,
+        "y": 520,
         "wires": []
     }
 ]
