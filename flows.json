@@ -761,7 +761,7 @@
         "wires": [
             [
                 "929d0c25cc30e2e7",
-                "a1fd7baf32c920b7"
+                "44afbffb25d126bf"
             ]
         ]
     },
@@ -784,7 +784,7 @@
         "wires": [
             [
                 "e75ea7d89e26bdec",
-                "a1fd7baf32c920b7"
+                "44afbffb25d126bf"
             ]
         ]
     },
@@ -812,7 +812,7 @@
         "y": 140,
         "wires": [
             [
-                "a1fd7baf32c920b7"
+                "44afbffb25d126bf"
             ]
         ]
     },
@@ -846,7 +846,7 @@
         "y": 360,
         "wires": [
             [
-                "a1fd7baf32c920b7"
+                "44afbffb25d126bf"
             ]
         ]
     },
@@ -940,26 +940,18 @@
         "wires": []
     },
     {
-        "id": "a1fd7baf32c920b7",
-        "type": "join",
+        "id": "44afbffb25d126bf",
+        "type": "function",
         "z": "e4bb5e0df95bd7f5",
-        "name": "",
-        "mode": "custom",
-        "build": "object",
-        "property": "",
-        "propertyType": "full",
-        "key": "topic",
-        "joiner": "\\n",
-        "joinerType": "str",
-        "accumulate": false,
-        "timeout": "1",
-        "count": "4",
-        "reduceRight": false,
-        "reduceExp": "",
-        "reduceInit": "",
-        "reduceInitType": "",
-        "reduceFixup": "",
-        "x": 610,
+        "name": "function 1",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
         "y": 240,
         "wires": [
             [
