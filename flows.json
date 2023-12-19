@@ -823,7 +823,7 @@
         "type": "ui_switch",
         "z": "e4bb5e0df95bd7f5",
         "name": "",
-        "label": "Actualizar",
+        "label": "Actualizar automáticamente",
         "tooltip": "",
         "group": "c371dadc8bcf8e88",
         "order": 4,
@@ -844,8 +844,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 400,
-        "y": 60,
+        "x": 340,
+        "y": 80,
         "wires": [
             []
         ]
