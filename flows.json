@@ -750,7 +750,7 @@
         "sqlquery": "fixed",
         "sql": "",
         "name": "Read Muestras",
-        "x": 960,
+        "x": 1080,
         "y": 420,
         "wires": [
             []
@@ -858,7 +858,8 @@
         "y": 420,
         "wires": [
             [
-                "44afbffb25d126bf"
+                "44afbffb25d126bf",
+                "288f8c126ef41781"
             ]
         ]
     },
@@ -915,7 +916,7 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 940,
+        "x": 1280,
         "y": 280,
         "wires": []
     },
@@ -931,7 +932,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 510,
+        "x": 870,
         "y": 280,
         "wires": [
             [
@@ -952,8 +953,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 110,
-        "y": 120,
+        "x": 570,
+        "y": 100,
         "wires": [
             [
                 "b1460d78fafba49c"
@@ -972,7 +973,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 720,
+        "x": 1080,
         "y": 280,
         "wires": [
             [
@@ -989,7 +990,7 @@
             "923ddfc98c95b421"
         ],
         "x": 155,
-        "y": 620,
+        "y": 600,
         "wires": [
             [
                 "aad7034baa4fbee6"
@@ -1013,12 +1014,10 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 280,
-        "y": 620,
+        "x": 260,
+        "y": 600,
         "wires": [
-            [
-                "1be51efc78560a53"
-            ]
+            []
         ]
     },
     {
@@ -1026,10 +1025,10 @@
         "type": "trigger",
         "z": "e4bb5e0df95bd7f5",
         "name": "",
-        "op1": "",
-        "op2": "true",
-        "op1type": "date",
-        "op2type": "bool",
+        "op1": "newsample",
+        "op2": "",
+        "op1type": "str",
+        "op2type": "nul",
         "duration": "250",
         "extend": false,
         "overrideDelay": false,
@@ -1037,12 +1036,78 @@
         "reset": "",
         "bytopic": "all",
         "topic": "topic",
-        "outputs": 2,
-        "x": 480,
+        "outputs": 1,
+        "x": 640,
         "y": 620,
         "wires": [
-            [],
-            []
+            [
+                "271129a2f62b749b"
+            ]
         ]
+    },
+    {
+        "id": "288f8c126ef41781",
+        "type": "function",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "function 1",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 420,
+        "wires": [
+            [
+                "44afbffb25d126bf"
+            ]
+        ]
+    },
+    {
+        "id": "6a91fbaf9999d86e",
+        "type": "inject",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 420,
+        "y": 680,
+        "wires": [
+            [
+                "1be51efc78560a53"
+            ]
+        ]
+    },
+    {
+        "id": "271129a2f62b749b",
+        "type": "debug",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 640,
+        "wires": []
     }
 ]
