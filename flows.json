@@ -168,23 +168,43 @@
         "mode": "RWC"
     },
     {
-        "id": "e32489603584723a",
+        "id": "cabf67be52900f1f",
         "type": "ui_spacer",
         "z": "e4bb5e0df95bd7f5",
         "name": "spacer",
         "group": "c371dadc8bcf8e88",
         "order": 2,
-        "width": 16,
+        "width": 6,
         "height": 1
     },
     {
-        "id": "937458ce26d8da94",
+        "id": "a93a8a69ec192217",
         "type": "ui_spacer",
         "z": "e4bb5e0df95bd7f5",
         "name": "spacer",
         "group": "c371dadc8bcf8e88",
         "order": 8,
         "width": 22,
+        "height": 1
+    },
+    {
+        "id": "5c922cb4caf204e9",
+        "type": "ui_spacer",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "spacer",
+        "group": "c371dadc8bcf8e88",
+        "order": 20,
+        "width": 16,
+        "height": 1
+    },
+    {
+        "id": "f39589a75e553d7a",
+        "type": "ui_spacer",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "spacer",
+        "group": "c371dadc8bcf8e88",
+        "order": 21,
+        "width": 16,
         "height": 1
     },
     {
@@ -714,7 +734,7 @@
         "name": "",
         "label": "Desde",
         "group": "c371dadc8bcf8e88",
-        "order": 1,
+        "order": 19,
         "width": 6,
         "height": 2,
         "passthru": true,
@@ -1194,5 +1214,64 @@
         "x": 630,
         "y": 320,
         "wires": []
+    },
+    {
+        "id": "f8697e9005d426e6",
+        "type": "ui_form",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "",
+        "label": "",
+        "group": "c371dadc8bcf8e88",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "inicio",
+                "value": "Inicio",
+                "type": "date",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "inicioT",
+                "value": "Inicio (tiempo)",
+                "type": "time",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "fin",
+                "value": "fin",
+                "type": "date",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "finT",
+                "value": "Fin (tiempo)",
+                "type": "time",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "Inicio": "",
+            "Inicio (tiempo)": "",
+            "fin": "",
+            "Fin (tiempo)": ""
+        },
+        "payload": "",
+        "submit": "Aplicar",
+        "cancel": "cancel",
+        "topic": "Settings",
+        "topicType": "str",
+        "splitLayout": true,
+        "className": "",
+        "x": 230,
+        "y": 640,
+        "wires": [
+            []
+        ]
     }
 ]
