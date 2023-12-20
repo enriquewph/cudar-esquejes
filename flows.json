@@ -707,10 +707,11 @@
         "sql": "",
         "name": "Read Muestras",
         "x": 380,
-        "y": 480,
+        "y": 500,
         "wires": [
             [
-                "8b46204691535b4e"
+                "8b46204691535b4e",
+                "74a468e22eee3275"
             ]
         ]
     },
@@ -1058,8 +1059,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 340,
-        "y": 600,
+        "x": 360,
+        "y": 660,
         "wires": []
     },
     {
@@ -1156,11 +1157,27 @@
         "finalize": "",
         "libs": [],
         "x": 600,
-        "y": 480,
+        "y": 500,
         "wires": [
             [
                 "501daf8cb1689031"
             ]
         ]
+    },
+    {
+        "id": "74a468e22eee3275",
+        "type": "debug",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 560,
+        "wires": []
     }
 ]
