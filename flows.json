@@ -1030,7 +1030,7 @@
         "type": "function",
         "z": "e4bb5e0df95bd7f5",
         "name": "QueryGen",
-        "func": "// Verificar si el mensaje tiene el formato esperado\nif (msg.topic === \"mostrar\" && msg.payload && msg.payload.desde && msg.payload.hasta) {\n    // Obtener los valores de desde, hasta y update del mensaje\n    var desdeTimestamp = msg.payload.desde;\n    var hastaTimestamp = msg.payload.hasta;\n    var updateBoolean = msg.payload.update || false; // Si no se proporciona, asumir false\n\n    // Construir la consulta SQL\n    var query = `SELECT timestamp, TempSustrato1, TempSustrato2 FROM muestras WHERE timestamp BETWEEN '${new Date(desdeTimestamp).toISOString()}' AND '${new Date(hastaTimestamp).toISOString()}'`;\n\n    // Enviar el mensaje con la consulta SQL\n    var queryMsg = {\n        topic: query,\n    };\n\n    return queryMsg;\n} else {\n    return null; // Descartar mensajes que no cumplen con el formato esperado\n}\n",
+        "func": "// Verificar si el mensaje tiene el formato esperado\nif (msg.topic === \"mostrar\" && msg.payload && msg.payload.desde && msg.payload.hasta) {\n    // Obtener los valores de desde, hasta y update del mensaje\n    var desdeTimestamp = msg.payload.desde;\n    var hastaTimestamp = msg.payload.hasta;\n    var updateBoolean = msg.payload.update || false; // Si no se proporciona, asumir false\n\n    // Construir la consulta SQL\n    var query = `SELECT * FROM muestras WHERE timestamp BETWEEN '${new Date(desdeTimestamp).toISOString()}' AND '${new Date(hastaTimestamp).toISOString()}'`;\n\n    // Enviar el mensaje con la consulta SQL\n    var queryMsg = {\n        topic: query,\n    };\n\n    return queryMsg;\n} else {\n    return null; // Descartar mensajes que no cumplen con el formato esperado\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1155,7 +1155,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 540,
+        "x": 600,
         "y": 480,
         "wires": [
             [
