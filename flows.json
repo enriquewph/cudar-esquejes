@@ -1247,7 +1247,7 @@
             {
                 "label": "Actualizar Automáticamente",
                 "value": "update",
-                "type": "checkbox",
+                "type": "switch",
                 "required": true,
                 "rows": null
             }
