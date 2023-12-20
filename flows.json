@@ -1102,7 +1102,7 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 720,
+        "x": 880,
         "y": 460,
         "wires": []
     },
@@ -1134,6 +1134,31 @@
         "stream": false,
         "addname": "",
         "x": 570,
+        "y": 460,
+        "wires": [
+            [
+                "a88a052ce102ce75"
+            ]
+        ]
+    },
+    {
+        "id": "a88a052ce102ce75",
+        "type": "switch",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "hask",
+                "v": "timestamp",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 710,
         "y": 460,
         "wires": [
             [
