@@ -168,7 +168,7 @@
         "mode": "RWC"
     },
     {
-        "id": "0ce603adeed53517",
+        "id": "363f8213fcd0865c",
         "type": "ui_spacer",
         "z": "e4bb5e0df95bd7f5",
         "name": "spacer",
@@ -694,7 +694,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 860,
+        "x": 900,
         "y": 340,
         "wires": []
     },
@@ -1077,16 +1077,251 @@
         "y": 460,
         "wires": [
             [
-                "acc256c200ebe09b",
-                "5e95b3505ab27236"
+                "7b33f5a6395e1ba5"
             ]
         ]
     },
     {
-        "id": "5e95b3505ab27236",
-        "type": "change",
+        "id": "c814f83a6d5ba4a0",
+        "type": "ui_chart",
         "z": "e4bb5e0df95bd7f5",
         "name": "",
+        "group": "c371dadc8bcf8e88",
+        "order": 10,
+        "width": 22,
+        "height": 5,
+        "label": "Temperatura ºC",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "dd HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "604800",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 960,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5cc25cd5c2c5c6bc",
+        "type": "change",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "get HumSustrato2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.HumSustrato2",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "HumSustrato2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "75e889b9d0d62515",
+        "type": "change",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "get TempAmbiente1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.TempAmbiente1",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "TempAmbiente1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 800,
+        "y": 660,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8050c1cf3e64fdd6",
+        "type": "change",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "get TempSustrato2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.TempSustrato2",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "TempSustrato2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f21e4860d7f89f45",
+        "type": "change",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "get HumSustrato1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.HumSustrato1",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "HumSustrato1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "db7ee51eb28c0c30",
+        "type": "change",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "get TempSustrato1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.TempSustrato1",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "TempSustrato1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "714dcc6259dbfec1",
+        "type": "change",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "get HumFol2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.HumFol2",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "HumFol2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 860,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "19308f46e277de23",
+        "type": "change",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "get TempExterior",
         "rules": [
             {
                 "t": "set",
@@ -1108,16 +1343,366 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 820,
-        "y": 420,
+        "x": 790,
+        "y": 900,
         "wires": [
-            [
-                "d063887755a3216a"
-            ]
+            []
         ]
     },
     {
-        "id": "d063887755a3216a",
+        "id": "75e2d5072793fdb4",
+        "type": "change",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "get HumAmbiente2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.HumAmbiente2",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "HumAmbiente2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 780,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "518dc503e422cf3f",
+        "type": "change",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "get HumFol1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.HumFol1",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "HumFol1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 770,
+        "y": 820,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a998376db516d5b4",
+        "type": "change",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "get HumAmbiente1",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.HumAmbiente1",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "HumAmbiente1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 740,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "edc2b29ec6ad8799",
+        "type": "change",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "get TempAmbiente2",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.TempAmbiente2",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "TempAmbiente2",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 800,
+        "y": 700,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "705f2ecbc460ae08",
+        "type": "change",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "get PotenciaConsumida",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.PotenciaConsumida",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "PotenciaConsumida",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 810,
+        "y": 1100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ed221727994cde9a",
+        "type": "change",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "get TempExterior",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.TempExterior",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "TempExterior",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "28c068271a6a2936",
+        "type": "change",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "get TempAgua",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.TempAgua",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "TempAgua",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 1020,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c7bccabe4221d62b",
+        "type": "change",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "get NivelAgua",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.NivelAgua",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "NivelAgua",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 1060,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "95e7fe628a3db6ab",
+        "type": "change",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "get LuzExterior",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.LuzExterior",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "LuzExterior",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 980,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "13de045fb8a3deae",
+        "type": "change",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "get HumExterior",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.HumExterior",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "HumExterior",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 780,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2ae129deeb37da22",
+        "type": "change",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "get TempExterior",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.TempExterior",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "TempExterior",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 790,
+        "y": 1180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7b33f5a6395e1ba5",
         "type": "debug",
         "z": "e4bb5e0df95bd7f5",
         "name": "debug 9",
@@ -1128,8 +1713,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1020,
-        "y": 400,
+        "x": 740,
+        "y": 380,
         "wires": []
     }
 ]
