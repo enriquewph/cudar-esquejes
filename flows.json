@@ -179,8 +179,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 340,
-        "y": 300,
+        "x": 600,
+        "y": 200,
         "wires": [
             [
                 "6cc1ca9b64bc2025",
@@ -218,8 +218,8 @@
         "ioFile": "",
         "useIOForPayload": false,
         "emptyMsgOnFail": false,
-        "x": 150,
-        "y": 300,
+        "x": 410,
+        "y": 200,
         "wires": [
             [],
             [
@@ -235,8 +235,8 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "Insert into muestras",
-        "x": 590,
-        "y": 300,
+        "x": 850,
+        "y": 200,
         "wires": [
             []
         ]
@@ -250,8 +250,8 @@
         "links": [
             "57cb7f364509d9f5"
         ],
-        "x": 565,
-        "y": 180,
+        "x": 825,
+        "y": 80,
         "wires": []
     },
     {
