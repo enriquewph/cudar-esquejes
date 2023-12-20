@@ -679,7 +679,7 @@
         "width": 8,
         "height": 1,
         "name": "",
-        "label": "Timestamp Ultima Muestra: ",
+        "label": "Ultima Muestra: ",
         "format": "{{msg.payload}}",
         "layout": "row-spread",
         "className": "",
@@ -687,7 +687,7 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1000,
+        "x": 960,
         "y": 780,
         "wires": []
     },
