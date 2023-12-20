@@ -996,7 +996,8 @@
         "y": 360,
         "wires": [
             [
-                "44afbffb25d126bf"
+                "44afbffb25d126bf",
+                "ba8589f64d2caf3d"
             ]
         ]
     },
@@ -1173,6 +1174,25 @@
         "color": "#000000",
         "x": 970,
         "y": 820,
+        "wires": []
+    },
+    {
+        "id": "ba8589f64d2caf3d",
+        "type": "ui_toast",
+        "z": "e4bb5e0df95bd7f5",
+        "position": "top right",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 0,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "",
+        "x": 630,
+        "y": 320,
         "wires": []
     }
 ]
