@@ -750,11 +750,11 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "Read Muestras",
-        "x": 480,
-        "y": 500,
+        "x": 400,
+        "y": 460,
         "wires": [
             [
-                "d34ec40f48cc110f"
+                "f758ae6fcd3a7537"
             ]
         ]
     },
@@ -1102,8 +1102,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 980,
-        "y": 260,
+        "x": 720,
+        "y": 460,
         "wires": []
     },
     {
@@ -1118,8 +1118,27 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 460,
-        "y": 600,
+        "x": 380,
+        "y": 560,
         "wires": []
+    },
+    {
+        "id": "f758ae6fcd3a7537",
+        "type": "split",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "",
+        "splt": "\\n",
+        "spltType": "str",
+        "arraySplt": 1,
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 570,
+        "y": 460,
+        "wires": [
+            [
+                "d34ec40f48cc110f"
+            ]
+        ]
     }
 ]
