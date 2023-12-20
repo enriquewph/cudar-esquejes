@@ -1229,12 +1229,12 @@
         "id": "f8697e9005d426e6",
         "type": "ui_form",
         "z": "e4bb5e0df95bd7f5",
-        "name": "",
+        "name": "Query Settings",
         "label": "",
         "group": "c371dadc8bcf8e88",
         "order": 8,
         "width": 14,
-        "height": 4,
+        "height": "6",
         "options": [
             {
                 "label": "inicio",
@@ -1278,7 +1278,7 @@
         "topicType": "str",
         "splitLayout": true,
         "className": "",
-        "x": 230,
+        "x": 260,
         "y": 640,
         "wires": [
             []
