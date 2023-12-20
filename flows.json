@@ -798,15 +798,15 @@
         "type": "function",
         "z": "e4bb5e0df95bd7f5",
         "name": "FirstStart",
-        "func": "// Código para obtener el timestamp actual al iniciar el tablero\nvar msg1 = {};\nvar now = new Date();\n\n// Ajustar a las 23:59:59\nnow.setHours(23);\nnow.setMinutes(59);\nnow.setSeconds(59);\n\nmsg1.topic = \"timestamp_actual\";\nmsg1.payload = now.getTime();\n\n// Código para obtener el timestamp de una semana atrás\nvar msg2 = {};\nvar unaSemanaAtras = new Date(Date.now() - (7 * 24 * 60 * 60 * 1000)); // Resta 7 días en milisegundos\n\n// Ajustar a las 00:00:01\nunaSemanaAtras.setHours(0);\nunaSemanaAtras.setMinutes(0);\nunaSemanaAtras.setSeconds(1);\n\nmsg2.topic = \"timestamp_semana_anterior\";\nmsg2.payload = unaSemanaAtras.getTime();\n\nvar msg3 = {};\nmsg3.topic = \"update\";\nmsg3.payload = false;\n\nreturn [msg1, msg2, msg3];\n",
+        "func": "// Código para obtener el timestamp actual al iniciar el tablero\nvar msg1 = {};\nvar now = new Date();\n\n// Compensar la diferencia de zona horaria\nvar timezoneOffset = now.getTimezoneOffset() * 60 * 1000;\n\n// Ajustar a las 23:59:59\nnow.setHours(23);\nnow.setMinutes(59);\nnow.setSeconds(59);\n\nnow = new Date(now.getTime() + timezoneOffset);\n\n\nmsg1.topic = \"timestamp_actual\";\nmsg1.payload = now;\n\n// Código para obtener el timestamp de una semana atrás\nvar msg2 = {};\nvar unaSemanaAtras = new Date(Date.now() - (7 * 24 * 60 * 60 * 1000)); // Resta 7 días en milisegundos\n\nunaSemanaAtras = new Date(now.getTime() + timezoneOffset);\n// Ajustar a las 00:00:01\nunaSemanaAtras.setHours(0);\nunaSemanaAtras.setMinutes(0);\nunaSemanaAtras.setSeconds(1);\n\n\nmsg2.topic = \"timestamp_semana_anterior\";\nmsg2.payload = unaSemanaAtras.getTime();\n\nvar msg3 = {};\nmsg3.topic = \"update\";\nmsg3.payload = false;\n\nreturn [msg1, msg2, msg3];",
         "outputs": 3,
         "timeout": 0,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 140,
-        "y": 120,
+        "x": 100,
+        "y": 160,
         "wires": [
             [
                 "b1460d78fafba49c",
