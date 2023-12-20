@@ -1283,43 +1283,51 @@
         "label": "",
         "group": "c371dadc8bcf8e88",
         "order": 8,
-        "width": 8,
-        "height": 9,
+        "width": "10",
+        "height": "10",
         "options": [
             {
-                "label": "inicio",
-                "value": "Inicio",
+                "label": "Inicio",
+                "value": "inicio",
                 "type": "date",
                 "required": true,
                 "rows": null
             },
             {
-                "label": "inicioT",
-                "value": "Inicio (tiempo)",
+                "label": "Inicio (tiempo)",
+                "value": "inicio_t",
                 "type": "time",
                 "required": true,
                 "rows": null
             },
             {
-                "label": "fin",
+                "label": "Fin",
                 "value": "fin",
                 "type": "date",
                 "required": true,
                 "rows": null
             },
             {
-                "label": "finT",
-                "value": "Fin (tiempo)",
+                "label": "Fin (tiempo)",
+                "value": "fin_t",
                 "type": "time",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Actualizar Automáticamente",
+                "value": "update",
+                "type": "checkbox",
                 "required": true,
                 "rows": null
             }
         ],
         "formValue": {
-            "Inicio": "",
-            "Inicio (tiempo)": "",
+            "inicio": "",
+            "inicio_t": "",
             "fin": "",
-            "Fin (tiempo)": ""
+            "fin_t": "",
+            "update": false
         },
         "payload": "",
         "submit": "Aplicar",
