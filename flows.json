@@ -319,8 +319,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1340,
-        "y": 440,
+        "x": 1180,
+        "y": 460,
         "wires": [
             []
         ]
@@ -363,8 +363,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1350,
-        "y": 480,
+        "x": 1190,
+        "y": 500,
         "wires": [
             []
         ]
@@ -407,8 +407,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1340,
-        "y": 520,
+        "x": 1180,
+        "y": 540,
         "wires": [
             []
         ]
@@ -451,8 +451,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1300,
-        "y": 400,
+        "x": 1140,
+        "y": 420,
         "wires": [
             []
         ]
@@ -495,8 +495,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1300,
-        "y": 560,
+        "x": 1140,
+        "y": 580,
         "wires": [
             []
         ]
@@ -539,8 +539,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1300,
-        "y": 600,
+        "x": 1140,
+        "y": 620,
         "wires": [
             []
         ]
@@ -583,8 +583,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1330,
-        "y": 640,
+        "x": 1170,
+        "y": 660,
         "wires": [
             []
         ]
@@ -627,8 +627,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1290,
-        "y": 680,
+        "x": 1130,
+        "y": 700,
         "wires": [
             []
         ]
@@ -671,8 +671,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1280,
-        "y": 720,
+        "x": 1120,
+        "y": 740,
         "wires": [
             []
         ]
@@ -715,8 +715,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1290,
-        "y": 760,
+        "x": 1130,
+        "y": 780,
         "wires": [
             []
         ]
@@ -738,8 +738,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1340,
-        "y": 360,
+        "x": 1180,
+        "y": 380,
         "wires": []
     },
     {
@@ -747,13 +747,15 @@
         "type": "sqlite",
         "z": "e4bb5e0df95bd7f5",
         "mydb": "e06a744f44db421c",
-        "sqlquery": "fixed",
+        "sqlquery": "msg.topic",
         "sql": "",
         "name": "Read Muestras",
-        "x": 1080,
-        "y": 420,
+        "x": 480,
+        "y": 500,
         "wires": [
-            []
+            [
+                "d34ec40f48cc110f"
+            ]
         ]
     },
     {
@@ -770,8 +772,8 @@
         "topic": "desde",
         "topicType": "str",
         "className": "",
-        "x": 310,
-        "y": 300,
+        "x": 330,
+        "y": 160,
         "wires": [
             [
                 "44afbffb25d126bf"
@@ -792,8 +794,8 @@
         "topic": "hasta",
         "topicType": "str",
         "className": "",
-        "x": 310,
-        "y": 240,
+        "x": 330,
+        "y": 120,
         "wires": [
             [
                 "44afbffb25d126bf"
@@ -820,8 +822,8 @@
         "payloadType": "bool",
         "topic": "apply",
         "topicType": "str",
-        "x": 310,
-        "y": 360,
+        "x": 330,
+        "y": 200,
         "wires": [
             [
                 "44afbffb25d126bf"
@@ -854,8 +856,8 @@
         "offcolor": "",
         "animate": false,
         "className": "",
-        "x": 380,
-        "y": 420,
+        "x": 260,
+        "y": 240,
         "wires": [
             [
                 "44afbffb25d126bf"
@@ -874,8 +876,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 120,
-        "y": 240,
+        "x": 140,
+        "y": 120,
         "wires": [
             [
                 "b1460d78fafba49c"
@@ -894,8 +896,8 @@
         "z": "e4bb5e0df95bd7f5",
         "name": "",
         "events": "connect",
-        "x": 100,
-        "y": 300,
+        "x": 140,
+        "y": 60,
         "wires": [
             [
                 "fca479973871e01a"
@@ -915,8 +917,8 @@
         "targetType": "full",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1280,
-        "y": 280,
+        "x": 780,
+        "y": 140,
         "wires": []
     },
     {
@@ -931,8 +933,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 870,
-        "y": 280,
+        "x": 570,
+        "y": 120,
         "wires": [
             [
                 "f7837ebcca8ba7c7",
@@ -952,8 +954,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 570,
-        "y": 100,
+        "x": 450,
+        "y": 40,
         "wires": [
             [
                 "b1460d78fafba49c"
@@ -972,11 +974,12 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1080,
-        "y": 280,
+        "x": 600,
+        "y": 200,
         "wires": [
             [
-                "157ece44bb6785d6"
+                "157ece44bb6785d6",
+                "d143184327f9a94e"
             ]
         ]
     },
@@ -988,8 +991,8 @@
         "links": [
             "923ddfc98c95b421"
         ],
-        "x": 155,
-        "y": 600,
+        "x": 115,
+        "y": 300,
         "wires": [
             [
                 "aad7034baa4fbee6"
@@ -1013,8 +1016,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 260,
-        "y": 600,
+        "x": 220,
+        "y": 300,
         "wires": [
             [
                 "1be51efc78560a53"
@@ -1038,8 +1041,8 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 1,
-        "x": 440,
-        "y": 600,
+        "x": 140,
+        "y": 360,
         "wires": [
             [
                 "288f8c126ef41781"
@@ -1058,12 +1061,64 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 660,
-        "y": 600,
+        "x": 340,
+        "y": 360,
         "wires": [
             [
                 "44afbffb25d126bf"
             ]
         ]
+    },
+    {
+        "id": "d143184327f9a94e",
+        "type": "function",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "QueryGen",
+        "func": "// Verificar si el mensaje tiene el formato esperado\nif (msg.topic === \"mostrar\" && msg.payload && msg.payload.desde && msg.payload.hasta) {\n    // Obtener los valores de desde, hasta y update del mensaje\n    var desdeTimestamp = msg.payload.desde;\n    var hastaTimestamp = msg.payload.hasta;\n    var updateBoolean = msg.payload.update || false; // Si no se proporciona, asumir false\n\n    // Construir la consulta SQL\n    var query = `SELECT * FROM muestras WHERE timestamp BETWEEN '${new Date(desdeTimestamp).toISOString()}' AND '${new Date(hastaTimestamp).toISOString()}'`;\n\n    // Enviar el mensaje con la consulta SQL\n    var queryMsg = {\n        topic: query,\n    };\n\n    return queryMsg;\n} else {\n    return null; // Descartar mensajes que no cumplen con el formato esperado\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 170,
+        "y": 500,
+        "wires": [
+            [
+                "327a7f7dda796add"
+            ]
+        ]
+    },
+    {
+        "id": "d34ec40f48cc110f",
+        "type": "debug",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 980,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "327a7f7dda796add",
+        "type": "debug",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 600,
+        "wires": []
     }
 ]
