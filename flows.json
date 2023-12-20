@@ -1148,7 +1148,7 @@
         "type": "function",
         "z": "e4bb5e0df95bd7f5",
         "name": "Procesar",
-        "func": "var input = msg.payload;\n\n// Inicializar la estructura de salida\nvar output = [{\n    \"series\": [\"TempSustrato1\"],\n    \"data\": []\n}];\n\n// Procesar cada elemento en el array de entrada\nfor (var i = 0; i < input.length; i++) {\n    var timestamp = Date.parse(input[i].timestamp);\n\n    // Crear un objeto en el formato deseado\n    var dataPoint = [\n        { \"x\": timestamp, \"y\": input[i].TempSustrato1 }\n    ];\n\n    // Agregar el objeto al array de salida\n    output[0].data.push(dataPoint);\n}\n\n// Enviar el mensaje transformado\nmsg.payload = output;\nreturn msg;\n",
+        "func": "var input = msg.payload;\n\n// Inicializar la estructura de salida\nvar output = [{\n    \"series\": [\"TempSustrato1\", \"TempSustrato2\"],\n    \"data\": [],\n    \"labels\": [\"\"]\n}];\n\n// Inicializar los arrays de datos\nvar dataSeries1 = [];\nvar dataSeries2 = [];\n\n// Procesar cada elemento en el array de entrada\nfor (var i = 0; i < input.length; i++) {\n    var timestamp = Date.parse(input[i].timestamp);\n\n    // Crear un objeto en el formato deseado para cada serie\n    var dataPoint1 = { \"x\": timestamp, \"y\": input[i].TempSustrato1 };\n    var dataPoint2 = { \"x\": timestamp, \"y\": input[i].TempSustrato2 };\n\n    // Agregar los objetos a los arrays de datos\n    dataSeries1.push(dataPoint1);\n    dataSeries2.push(dataPoint2);\n}\n\n// Agregar los arrays de datos al array de salida\noutput[0].data.push(dataSeries1);\noutput[0].data.push(dataSeries2);\n\n// Enviar el mensaje transformado\nmsg.payload = output;\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
