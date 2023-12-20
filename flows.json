@@ -706,11 +706,11 @@
         "sqlquery": "msg.topic",
         "sql": "",
         "name": "Read Muestras",
-        "x": 400,
-        "y": 460,
+        "x": 380,
+        "y": 480,
         "wires": [
             [
-                "86b6035844128d55"
+                "8b46204691535b4e"
             ]
         ]
     },
@@ -1144,7 +1144,27 @@
         ]
     },
     {
-        "id": "86b6035844128d55",
+        "id": "8b46204691535b4e",
+        "type": "function",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "Procesar",
+        "func": "var input = msg.payload;\n\n// Inicializar la estructura de salida\nvar output = [{\n    \"series\": [\"TempSustrato1\", \"TempSustrato2\"],\n    \"data\": [],\n    \"labels\": [\"\"]\n}];\n\n// Procesar cada elemento en el array de entrada\nfor (var i = 0; i < input.length; i++) {\n    var timestamp = Date.parse(input[i].timestamp);\n\n    // Crear un objeto en el formato deseado\n    var dataPoint = [\n        { \"x\": timestamp, \"y\": input[i].TempSustrato1 },\n        { \"x\": timestamp, \"y\": input[i].TempSustrato2 }\n    ];\n\n    // Agregar el objeto al array de salida\n    output[0].data.push(dataPoint);\n}\n\n// Enviar el mensaje transformado\nmsg.payload = output;\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 480,
+        "wires": [
+            [
+                "ad137cbe5a1eb1bf"
+            ]
+        ]
+    },
+    {
+        "id": "ad137cbe5a1eb1bf",
         "type": "debug",
         "z": "e4bb5e0df95bd7f5",
         "name": "debug 9",
@@ -1155,8 +1175,8 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 620,
-        "y": 480,
+        "x": 840,
+        "y": 580,
         "wires": []
     }
 ]
