@@ -296,7 +296,7 @@
         "xformat": "YY/MM/DD HH:mm",
         "interpolate": "linear",
         "nodata": "",
-        "dot": false,
+        "dot": true,
         "ymin": "",
         "ymax": "",
         "removeOlder": 1,
@@ -304,7 +304,7 @@
         "removeOlderUnit": "604800",
         "cutout": 0,
         "useOneColor": false,
-        "useUTC": false,
+        "useUTC": true,
         "colors": [
             "#1f77b4",
             "#aec7e8",
