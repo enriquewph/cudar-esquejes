@@ -408,7 +408,7 @@
         "useDifferentColor": false,
         "className": "",
         "x": 1120,
-        "y": 820,
+        "y": 660,
         "wires": [
             []
         ]
@@ -452,7 +452,7 @@
         "useDifferentColor": false,
         "className": "",
         "x": 1080,
-        "y": 660,
+        "y": 620,
         "wires": [
             []
         ]
@@ -496,7 +496,7 @@
         "useDifferentColor": false,
         "className": "",
         "x": 1080,
-        "y": 880,
+        "y": 700,
         "wires": [
             []
         ]
@@ -540,7 +540,7 @@
         "useDifferentColor": false,
         "className": "",
         "x": 1110,
-        "y": 920,
+        "y": 740,
         "wires": [
             []
         ]
@@ -584,7 +584,7 @@
         "useDifferentColor": false,
         "className": "",
         "x": 1070,
-        "y": 1140,
+        "y": 820,
         "wires": [
             []
         ]
@@ -628,7 +628,7 @@
         "useDifferentColor": false,
         "className": "",
         "x": 1060,
-        "y": 1180,
+        "y": 860,
         "wires": [
             []
         ]
@@ -672,7 +672,7 @@
         "useDifferentColor": false,
         "className": "",
         "x": 1070,
-        "y": 1100,
+        "y": 780,
         "wires": [
             []
         ]
@@ -694,8 +694,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 820,
-        "y": 340,
+        "x": 1120,
+        "y": 460,
         "wires": []
     },
     {
@@ -710,7 +710,7 @@
         "y": 460,
         "wires": [
             [
-                "f758ae6fcd3a7537"
+                "86b6035844128d55"
             ]
         ]
     },
@@ -935,7 +935,7 @@
         "wires": [
             [
                 "157ece44bb6785d6",
-                "d143184327f9a94e"
+                "2023e30e173f8938"
             ]
         ]
     },
@@ -1030,7 +1030,7 @@
         "type": "function",
         "z": "e4bb5e0df95bd7f5",
         "name": "QueryGen",
-        "func": "// Verificar si el mensaje tiene el formato esperado\nif (msg.topic === \"mostrar\" && msg.payload && msg.payload.desde && msg.payload.hasta) {\n    // Obtener los valores de desde, hasta y update del mensaje\n    var desdeTimestamp = msg.payload.desde;\n    var hastaTimestamp = msg.payload.hasta;\n    var updateBoolean = msg.payload.update || false; // Si no se proporciona, asumir false\n\n    // Construir la consulta SQL\n    var query = `SELECT * FROM muestras WHERE timestamp BETWEEN '${new Date(desdeTimestamp).toISOString()}' AND '${new Date(hastaTimestamp).toISOString()}'`;\n\n    // Enviar el mensaje con la consulta SQL\n    var queryMsg = {\n        topic: query,\n    };\n\n    return queryMsg;\n} else {\n    return null; // Descartar mensajes que no cumplen con el formato esperado\n}\n",
+        "func": "// Verificar si el mensaje tiene el formato esperado\nif (msg.topic === \"mostrar\" && msg.payload && msg.payload.desde && msg.payload.hasta) {\n    // Obtener los valores de desde, hasta y update del mensaje\n    var desdeTimestamp = msg.payload.desde;\n    var hastaTimestamp = msg.payload.hasta;\n    var updateBoolean = msg.payload.update || false; // Si no se proporciona, asumir false\n\n    // Construir la consulta SQL\n    var query = `SELECT timestamp, TempSustrato1, TempSustrato2 FROM muestras WHERE timestamp BETWEEN '${new Date(desdeTimestamp).toISOString()}' AND '${new Date(hastaTimestamp).toISOString()}'`;\n\n    // Enviar el mensaje con la consulta SQL\n    var queryMsg = {\n        topic: query,\n    };\n\n    return queryMsg;\n} else {\n    return null; // Descartar mensajes que no cumplen con el formato esperado\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1058,46 +1058,9 @@
         "complete": "false",
         "statusVal": "",
         "statusType": "auto",
-        "x": 380,
-        "y": 560,
+        "x": 340,
+        "y": 600,
         "wires": []
-    },
-    {
-        "id": "f758ae6fcd3a7537",
-        "type": "split",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "",
-        "splt": "\\n",
-        "spltType": "str",
-        "arraySplt": 1,
-        "arraySpltType": "len",
-        "stream": false,
-        "addname": "",
-        "x": 570,
-        "y": 460,
-        "wires": [
-            [
-                "acc256c200ebe09b",
-                "db7ee51eb28c0c30",
-                "8050c1cf3e64fdd6",
-                "f21e4860d7f89f45",
-                "5cc25cd5c2c5c6bc",
-                "75e889b9d0d62515",
-                "edc2b29ec6ad8799",
-                "a998376db516d5b4",
-                "75e2d5072793fdb4",
-                "518dc503e422cf3f",
-                "714dcc6259dbfec1",
-                "19308f46e277de23",
-                "13de045fb8a3deae",
-                "95e7fe628a3db6ab",
-                "28c068271a6a2936",
-                "c7bccabe4221d62b",
-                "705f2ecbc460ae08",
-                "ed221727994cde9a",
-                "2ae129deeb37da22"
-            ]
-        ]
     },
     {
         "id": "c814f83a6d5ba4a0",
@@ -1138,747 +1101,62 @@
         "useDifferentColor": false,
         "className": "",
         "x": 1080,
-        "y": 620,
+        "y": 580,
         "wires": [
             []
         ]
     },
     {
-        "id": "5cc25cd5c2c5c6bc",
-        "type": "change",
+        "id": "2023e30e173f8938",
+        "type": "trigger",
         "z": "e4bb5e0df95bd7f5",
-        "name": "get HumSustrato2",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.HumSustrato2",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "HumSustrato2",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "timestamp",
-                "pt": "msg",
-                "to": "payload.timestamp",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 790,
-        "y": 620,
+        "name": "CLEAR CHART",
+        "op1": "[]",
+        "op2": "",
+        "op1type": "json",
+        "op2type": "pay",
+        "duration": "250",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 2,
+        "x": 760,
+        "y": 320,
         "wires": [
             [
-                "e506e5a3c125556f"
-            ]
-        ]
-    },
-    {
-        "id": "75e889b9d0d62515",
-        "type": "change",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "get TempAmbiente1",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.TempAmbiente1",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "TempAmbiente1",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "timestamp",
-                "pt": "msg",
-                "to": "payload.timestamp",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 800,
-        "y": 660,
-        "wires": [
-            [
-                "c814f83a6d5ba4a0"
-            ]
-        ]
-    },
-    {
-        "id": "8050c1cf3e64fdd6",
-        "type": "change",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "get TempSustrato2",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.TempSustrato2",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "TempSustrato2",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "timestamp",
-                "pt": "msg",
-                "to": "payload.timestamp",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 790,
-        "y": 540,
-        "wires": [
-            [
-                "501daf8cb1689031"
-            ]
-        ]
-    },
-    {
-        "id": "f21e4860d7f89f45",
-        "type": "change",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "get HumSustrato1",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.HumSustrato1",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "HumSustrato1",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "timestamp",
-                "pt": "msg",
-                "to": "payload.timestamp",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 790,
-        "y": 580,
-        "wires": [
-            [
-                "e506e5a3c125556f"
-            ]
-        ]
-    },
-    {
-        "id": "db7ee51eb28c0c30",
-        "type": "change",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "get TempSustrato1",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.TempSustrato1",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "TempSustrato1",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "timestamp",
-                "pt": "msg",
-                "to": "payload.timestamp",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 790,
-        "y": 500,
-        "wires": [
-            [
-                "501daf8cb1689031"
-            ]
-        ]
-    },
-    {
-        "id": "714dcc6259dbfec1",
-        "type": "change",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "get HumFol2",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.HumFol2",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "HumFol2",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "timestamp",
-                "pt": "msg",
-                "to": "payload.timestamp",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 770,
-        "y": 860,
-        "wires": [
-            [
-                "73d450825d8c68b2"
-            ]
-        ]
-    },
-    {
-        "id": "19308f46e277de23",
-        "type": "change",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "get TempExterior",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.TempExterior",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "TempExterior",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "timestamp",
-                "pt": "msg",
-                "to": "payload.timestamp",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 790,
-        "y": 900,
-        "wires": [
-            [
-                "c814f83a6d5ba4a0"
-            ]
-        ]
-    },
-    {
-        "id": "75e2d5072793fdb4",
-        "type": "change",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "get HumAmbiente2",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.HumAmbiente2",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "HumAmbiente2",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "timestamp",
-                "pt": "msg",
-                "to": "payload.timestamp",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 790,
-        "y": 780,
-        "wires": [
-            [
-                "9c4d44102eafc76d"
-            ]
-        ]
-    },
-    {
-        "id": "518dc503e422cf3f",
-        "type": "change",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "get HumFol1",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.HumFol1",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "HumFol1",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "timestamp",
-                "pt": "msg",
-                "to": "payload.timestamp",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 770,
-        "y": 820,
-        "wires": [
-            [
-                "73d450825d8c68b2"
-            ]
-        ]
-    },
-    {
-        "id": "a998376db516d5b4",
-        "type": "change",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "get HumAmbiente1",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.HumAmbiente1",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "HumAmbiente1",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "timestamp",
-                "pt": "msg",
-                "to": "payload.timestamp",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 790,
-        "y": 740,
-        "wires": [
-            [
-                "9c4d44102eafc76d"
-            ]
-        ]
-    },
-    {
-        "id": "edc2b29ec6ad8799",
-        "type": "change",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "get TempAmbiente2",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.TempAmbiente2",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "TempAmbiente2",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "timestamp",
-                "pt": "msg",
-                "to": "payload.timestamp",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 800,
-        "y": 700,
-        "wires": [
-            [
-                "c814f83a6d5ba4a0"
-            ]
-        ]
-    },
-    {
-        "id": "705f2ecbc460ae08",
-        "type": "change",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "get PotenciaConsumida",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.PotenciaConsumida",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "PotenciaConsumida",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "timestamp",
-                "pt": "msg",
-                "to": "payload.timestamp",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 810,
-        "y": 1100,
-        "wires": [
-            [
-                "54a7d988b388d7fd"
-            ]
-        ]
-    },
-    {
-        "id": "ed221727994cde9a",
-        "type": "change",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "get Corriente_Consumida",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.Corriente_Consumida",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "Corriente_Consumida",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "timestamp",
-                "pt": "msg",
-                "to": "payload.timestamp",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 810,
-        "y": 1140,
-        "wires": [
-            [
-                "274ba354eda38b20"
-            ]
-        ]
-    },
-    {
-        "id": "28c068271a6a2936",
-        "type": "change",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "get TempAgua",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.TempAgua",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "TempAgua",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "timestamp",
-                "pt": "msg",
-                "to": "payload.timestamp",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 780,
-        "y": 1020,
-        "wires": [
-            [
-                "c814f83a6d5ba4a0"
-            ]
-        ]
-    },
-    {
-        "id": "c7bccabe4221d62b",
-        "type": "change",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "get NivelAgua",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.NivelAgua",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "NivelAgua",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "timestamp",
-                "pt": "msg",
-                "to": "payload.timestamp",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 780,
-        "y": 1060,
-        "wires": [
-            [
-                "237130adae08f666"
-            ]
-        ]
-    },
-    {
-        "id": "95e7fe628a3db6ab",
-        "type": "change",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "get LuzExterior",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.LuzExterior",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "LuzExterior",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "timestamp",
-                "pt": "msg",
-                "to": "payload.timestamp",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 780,
-        "y": 980,
-        "wires": [
-            [
-                "c5353f2ff03a99fc"
-            ]
-        ]
-    },
-    {
-        "id": "13de045fb8a3deae",
-        "type": "change",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "get HumExterior",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.HumExterior",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "HumExterior",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "timestamp",
-                "pt": "msg",
-                "to": "payload.timestamp",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 780,
-        "y": 940,
-        "wires": [
-            [
-                "9c4d44102eafc76d"
-            ]
-        ]
-    },
-    {
-        "id": "2ae129deeb37da22",
-        "type": "change",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "get VoltajeConsumido",
-        "rules": [
-            {
-                "t": "set",
-                "p": "payload",
-                "pt": "msg",
-                "to": "payload.VoltajeConsumido",
-                "tot": "msg"
-            },
-            {
-                "t": "set",
-                "p": "topic",
-                "pt": "msg",
-                "to": "VoltajeConsumido",
-                "tot": "str"
-            },
-            {
-                "t": "set",
-                "p": "timestamp",
-                "pt": "msg",
-                "to": "payload.timestamp",
-                "tot": "msg"
-            }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 800,
-        "y": 1180,
-        "wires": [
-            [
+                "501daf8cb1689031",
+                "e506e5a3c125556f",
+                "c814f83a6d5ba4a0",
+                "9c4d44102eafc76d",
+                "73d450825d8c68b2",
+                "237130adae08f666",
+                "c5353f2ff03a99fc",
+                "54a7d988b388d7fd",
+                "274ba354eda38b20",
                 "a5100213482133eb"
+            ],
+            [
+                "d143184327f9a94e"
             ]
         ]
+    },
+    {
+        "id": "86b6035844128d55",
+        "type": "debug",
+        "z": "e4bb5e0df95bd7f5",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 480,
+        "wires": []
     }
 ]
