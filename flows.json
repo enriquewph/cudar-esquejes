@@ -1148,7 +1148,7 @@
         "type": "function",
         "z": "e4bb5e0df95bd7f5",
         "name": "Procesar",
-        "func": "var input = msg.payload;\n\n// Inicializar la estructura de salida\nvar output = [{\n    \"series\": [\"TempSustrato1\", \"TempSustrato2\"],\n    \"data\": [],\n    \"labels\": [\"\"]\n}];\n\n// Procesar cada elemento en el array de entrada\nfor (var i = 0; i < input.length; i++) {\n    var timestamp = Date.parse(input[i].timestamp);\n\n    // Crear un objeto en el formato deseado\n    var dataPoint = [\n        { \"x\": timestamp, \"y\": input[i].TempSustrato1 },\n        { \"x\": timestamp, \"y\": input[i].TempSustrato2 }\n    ];\n\n    // Agregar el objeto al array de salida\n    output[0].data.push(dataPoint);\n}\n\n// Enviar el mensaje transformado\nmsg.payload = output;\nreturn msg;\n",
+        "func": "var input = msg.payload;\n\n// Inicializar la estructura de salida\nvar output = [{\n    \"series\": [\"TempSustrato1\", \"TempSustrato2\"],\n    \"data\": []\n}];\n\n// Procesar cada elemento en el array de entrada\nfor (var i = 0; i < input.length; i++) {\n    var timestamp = Date.parse(input[i].timestamp);\n\n    // Crear un objeto en el formato deseado\n    var dataPoint = [\n        { \"x\": timestamp, \"y\": input[i].TempSustrato1 },\n        { \"x\": timestamp, \"y\": input[i].TempSustrato2 }\n    ];\n\n    // Agregar el objeto al array de salida\n    output[0].data.push(dataPoint);\n}\n\n// Enviar el mensaje transformado\nmsg.payload = output;\nreturn msg;\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1159,24 +1159,8 @@
         "y": 480,
         "wires": [
             [
-                "ad137cbe5a1eb1bf"
+                "501daf8cb1689031"
             ]
         ]
-    },
-    {
-        "id": "ad137cbe5a1eb1bf",
-        "type": "debug",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "debug 9",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 840,
-        "y": 580,
-        "wires": []
     }
 ]
