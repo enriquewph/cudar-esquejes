@@ -1069,7 +1069,7 @@
         "id": "2023e30e173f8938",
         "type": "trigger",
         "z": "e4bb5e0df95bd7f5",
-        "name": "CLEAR CHART",
+        "name": "CLEAR & DRAW",
         "op1": "[]",
         "op2": "",
         "op1type": "json",
@@ -1082,7 +1082,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 2,
-        "x": 760,
+        "x": 770,
         "y": 260,
         "wires": [
             [
