@@ -168,7 +168,7 @@
         "mode": "RWC"
     },
     {
-        "id": "363f8213fcd0865c",
+        "id": "8eed8f3f45705613",
         "type": "ui_spacer",
         "z": "e4bb5e0df95bd7f5",
         "name": "spacer",
@@ -289,7 +289,7 @@
         "group": "c371dadc8bcf8e88",
         "order": 7,
         "width": 22,
-        "height": 5,
+        "height": 10,
         "label": "Temperaturas de Sustrato ºC",
         "chartType": "line",
         "legend": "false",
