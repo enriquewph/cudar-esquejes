@@ -319,8 +319,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1080,
-        "y": 440,
+        "x": 1000,
+        "y": 380,
         "wires": [
             []
         ]
@@ -363,8 +363,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1090,
-        "y": 480,
+        "x": 1010,
+        "y": 420,
         "wires": [
             []
         ]
@@ -407,8 +407,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1080,
-        "y": 520,
+        "x": 1000,
+        "y": 460,
         "wires": [
             []
         ]
@@ -451,8 +451,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1040,
-        "y": 600,
+        "x": 960,
+        "y": 540,
         "wires": [
             []
         ]
@@ -495,8 +495,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1040,
-        "y": 640,
+        "x": 960,
+        "y": 580,
         "wires": [
             []
         ]
@@ -539,8 +539,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1070,
-        "y": 680,
+        "x": 990,
+        "y": 620,
         "wires": [
             []
         ]
@@ -583,8 +583,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1030,
-        "y": 760,
+        "x": 950,
+        "y": 700,
         "wires": [
             []
         ]
@@ -627,8 +627,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1020,
-        "y": 800,
+        "x": 940,
+        "y": 740,
         "wires": [
             []
         ]
@@ -671,8 +671,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1030,
-        "y": 720,
+        "x": 950,
+        "y": 660,
         "wires": [
             []
         ]
@@ -694,8 +694,8 @@
         "font": "",
         "fontSize": 16,
         "color": "#000000",
-        "x": 1080,
-        "y": 840,
+        "x": 1000,
+        "y": 780,
         "wires": []
     },
     {
@@ -861,23 +861,6 @@
         ]
     },
     {
-        "id": "157ece44bb6785d6",
-        "type": "debug",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "debug 6",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 780,
-        "y": 140,
-        "wires": []
-    },
-    {
         "id": "44afbffb25d126bf",
         "type": "function",
         "z": "e4bb5e0df95bd7f5",
@@ -934,7 +917,6 @@
         "y": 200,
         "wires": [
             [
-                "157ece44bb6785d6",
                 "2023e30e173f8938"
             ]
         ]
@@ -1041,26 +1023,9 @@
         "y": 500,
         "wires": [
             [
-                "327a7f7dda796add",
                 "bd9a0fa686ecb774"
             ]
         ]
-    },
-    {
-        "id": "327a7f7dda796add",
-        "type": "debug",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "debug 8",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 360,
-        "y": 660,
-        "wires": []
     },
     {
         "id": "c814f83a6d5ba4a0",
@@ -1100,8 +1065,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1040,
-        "y": 560,
+        "x": 960,
+        "y": 500,
         "wires": [
             []
         ]
@@ -1123,7 +1088,7 @@
         "bytopic": "all",
         "topic": "topic",
         "outputs": 2,
-        "x": 800,
+        "x": 760,
         "y": 260,
         "wires": [
             [
@@ -1155,7 +1120,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 660,
+        "x": 560,
         "y": 500,
         "wires": [
             [
