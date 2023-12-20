@@ -840,7 +840,7 @@
         "type": "function",
         "z": "e4bb5e0df95bd7f5",
         "name": "Hold & Send",
-        "func": "// Obtener el contexto global\nvar contextoGlobal = global.get(\"contextoGlobal\") || {};\n\nvar return_date = false;\n\n// Nodo para procesar y almacenar entradas\nif (msg.topic === \"inicio\") {\n    contextoGlobal.desdeTimestamp = msg.payload;\n} else if (msg.topic === \"fin\") {\n    contextoGlobal.hastaTimestamp = msg.payload;\n    if (contextoGlobal.updateBoolean === true)\n    {\n        return_date = true;\n    }\n} else if (msg.topic === \"update\") {\n    contextoGlobal.updateBoolean = msg.payload;\n    if (msg.payload === true) {\n        return_date = true;\n    }\n} else if (msg.topic === \"apply\" || msg.payload === \"newSample\") {\n    // Combinar y enviar el mensaje\n    var combinedMsg = {\n        topic: \"mostrar\",\n        payload: {\n            desde: contextoGlobal.desdeTimestamp,\n            hasta: contextoGlobal.hastaTimestamp,\n            update: contextoGlobal.updateBoolean\n        }\n    };\n    \n    return combinedMsg;\n}\n\n// Guardar el contexto global\nglobal.set(\"contextoGlobal\", contextoGlobal);\n\nif (return_date) {\n    var ret = {};\n    ret.topic = \"fin\";\n    ret.payload = Date.now();\n    return ret;\n}\n\nreturn null; // No hacer nada si no es \"apply\"\n",
+        "func": "// Obtener el contexto global\nvar contextoGlobal = global.get(\"contextoGlobal\") || {};\n\nvar return_date = false;\n\n// Nodo para procesar y almacenar entradas\nif (msg.topic === \"inicio\") {\n    contextoGlobal.inicioTimestamp = msg.payload;\n} else if (msg.topic === \"fin\") {\n    contextoGlobal.finTimestamp = msg.payload;\n    if (contextoGlobal.updateBoolean === true) {\n        return_date = true;\n    }\n} else if (msg.topic === \"inicioT\") {\n    var inicioTime = new Date(msg.payload);\n    contextoGlobal.inicioTimestamp.setHours(inicioTime.getHours(), inicioTime.getMinutes(), inicioTime.getSeconds());\n} else if (msg.topic === \"finT\") {\n    var finTime = new Date(msg.payload);\n    contextoGlobal.finTimestamp.setHours(finTime.getHours(), finTime.getMinutes(), finTime.getSeconds());\n} else if (msg.topic === \"update\") {\n    contextoGlobal.updateBoolean = msg.payload;\n    if (msg.payload === true) {\n        return_date = true;\n    }\n} else if (msg.topic === \"apply\" || msg.payload === \"newSample\") {\n    // Combinar y enviar el mensaje\n    var combinedMsg = {\n        topic: \"mostrar\",\n        payload: {\n            inicio: contextoGlobal.inicioTimestamp,\n            fin: contextoGlobal.finTimestamp,\n            update: contextoGlobal.updateBoolean\n        }\n    };\n\n    return combinedMsg;\n}\n\n// Guardar el contexto global\nglobal.set(\"contextoGlobal\", contextoGlobal);\n\nif (return_date) {\n    var ret = {};\n    ret.topic = \"fin\";\n    ret.payload = Date.now();\n    return ret;\n}\n\nreturn null; // No hacer nada si no es \"apply\"\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -988,7 +988,7 @@
         "type": "function",
         "z": "e4bb5e0df95bd7f5",
         "name": "QueryGen",
-        "func": "// Verificar si el mensaje tiene el formato esperado\nif (msg.topic === \"mostrar\" && msg.payload && msg.payload.desde && msg.payload.hasta) {\n    // Obtener los valores de desde, hasta y update del mensaje\n    var desdeTimestamp = msg.payload.desde;\n    var hastaTimestamp = msg.payload.hasta;\n    var updateBoolean = msg.payload.update || false; // Si no se proporciona, asumir false\n\n    // Construir la consulta SQL\n    var query = `SELECT * FROM muestras WHERE timestamp BETWEEN '${new Date(desdeTimestamp).toISOString()}' AND '${new Date(hastaTimestamp).toISOString()}'`;\n\n    // Enviar el mensaje con la consulta SQL\n    var queryMsg = {\n        topic: query,\n    };\n\n    return queryMsg;\n} else {\n    return null; // Descartar mensajes que no cumplen con el formato esperado\n}\n",
+        "func": "// Verificar si el mensaje tiene el formato esperado\nif (msg.topic === \"mostrar\" && msg.payload && msg.payload.desde && msg.payload.hasta) {\n    // Obtener los valores de desde, hasta y update del mensaje\n    var desdeTimestamp = msg.payload.inicio;\n    var hastaTimestamp = msg.payload.fin;\n    var updateBoolean = msg.payload.update || false; // Si no se proporciona, asumir false\n\n    // Construir la consulta SQL\n    var query = `SELECT * FROM muestras WHERE timestamp BETWEEN '${new Date(desdeTimestamp).toISOString()}' AND '${new Date(hastaTimestamp).toISOString()}'`;\n\n    // Enviar el mensaje con la consulta SQL\n    var queryMsg = {\n        topic: query,\n    };\n\n    return queryMsg;\n} else {\n    return null; // Descartar mensajes que no cumplen con el formato esperado\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1198,7 +1198,9 @@
         "x": 320,
         "y": 160,
         "wires": [
-            []
+            [
+                "44afbffb25d126bf"
+            ]
         ]
     },
     {
@@ -1223,7 +1225,8 @@
         "y": 240,
         "wires": [
             [
-                "482af6182e0f0975"
+                "482af6182e0f0975",
+                "44afbffb25d126bf"
             ]
         ]
     },
