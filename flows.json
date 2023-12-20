@@ -859,7 +859,7 @@
         "type": "function",
         "z": "e4bb5e0df95bd7f5",
         "name": "Filtrar: Hasta",
-        "func": "// Verificar si el mensaje cumple con la condición\nif (msg.topic === \"hasta\") {\n    return msg;\n} else {\n    return null; // Descartar mensajes con otros temas\n}\n",
+        "func": "// Verificar si el mensaje cumple con la condición\nif (msg.topic === \"fin\") {\n    return msg;\n} else {\n    return null; // Descartar mensajes con otros temas\n}\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
