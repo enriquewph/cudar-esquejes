@@ -840,7 +840,7 @@
         "type": "function",
         "z": "e4bb5e0df95bd7f5",
         "name": "Hold & Send",
-        "func": "// Obtener el contexto global\nvar contextoGlobal = global.get(\"contextoGlobal\") || {};\n\nvar return_date = false;\n\n// Nodo para procesar y almacenar entradas\nif (msg.topic === \"inicio\") {\n    contextoGlobal.inicioTimestamp = msg.payload;\n} else if (msg.topic === \"fin\") {\n    contextoGlobal.finTimestamp = msg.payload;\n    if (contextoGlobal.updateBoolean === true) {\n        return_date = true;\n    }\n} else if (msg.topic === \"inicioT\") {\n    var inicioTime = new Date(msg.payload);\n    contextoGlobal.inicioTimestamp.setHours(inicioTime.getHours(), inicioTime.getMinutes(), inicioTime.getSeconds());\n} else if (msg.topic === \"finT\") {\n    var finTime = new Date(msg.payload);\n    contextoGlobal.finTimestamp.setHours(finTime.getHours(), finTime.getMinutes(), finTime.getSeconds());\n} else if (msg.topic === \"update\") {\n    contextoGlobal.updateBoolean = msg.payload;\n    if (msg.payload === true) {\n        return_date = true;\n    }\n} else if (msg.topic === \"apply\" || msg.payload === \"newSample\") {\n    // Combinar y enviar el mensaje\n    var combinedMsg = {\n        topic: \"mostrar\",\n        payload: {\n            inicio: contextoGlobal.inicioTimestamp,\n            fin: contextoGlobal.finTimestamp,\n            update: contextoGlobal.updateBoolean\n        }\n    };\n\n    return combinedMsg;\n}\n\n// Guardar el contexto global\nglobal.set(\"contextoGlobal\", contextoGlobal);\n\nif (return_date) {\n    var ret = {};\n    ret.topic = \"fin\";\n    ret.payload = Date.now();\n    return ret;\n}\n\nreturn null; // No hacer nada si no es \"apply\"\n",
+        "func": "// Obtener el contexto global\nvar contextoGlobal = global.get(\"contextoGlobal\") || {};\n\nvar return_date = false;\n\n// Nodo para procesar y almacenar entradas\nif (msg.topic === \"inicio\") {\n    contextoGlobal.inicioTimestamp = msg.payload;\n} else if (msg.topic === \"fin\") {\n    contextoGlobal.finTimestamp = msg.payload;\n    if (contextoGlobal.updateBoolean === true) {\n        return_date = true;\n    }\n} else if (msg.topic === \"inicioT\") {\n    if (!(contextoGlobal.inicioTimestamp instanceof Date)) {\n        contextoGlobal.inicioTimestamp = new Date();\n    }\n    var inicioTime = new Date(msg.payload);\n    contextoGlobal.inicioTimestamp.setHours(inicioTime.getHours(), inicioTime.getMinutes(), inicioTime.getSeconds());\n} else if (msg.topic === \"finT\") {\n    if (!(contextoGlobal.finTimestamp instanceof Date)) {\n        contextoGlobal.finTimestamp = new Date();\n    }\n    var finTime = new Date(msg.payload);\n    contextoGlobal.finTimestamp.setHours(finTime.getHours(), finTime.getMinutes(), finTime.getSeconds());\n} else if (msg.topic === \"update\") {\n    contextoGlobal.updateBoolean = msg.payload;\n    if (msg.payload === true) {\n        return_date = true;\n    }\n} else if (msg.topic === \"apply\" || msg.payload === \"newSample\") {\n    // Combinar y enviar el mensaje\n    var combinedMsg = {\n        topic: \"mostrar\",\n        payload: {\n            inicio: contextoGlobal.inicioTimestamp,\n            fin: contextoGlobal.finTimestamp,\n            update: contextoGlobal.updateBoolean\n        }\n    };\n\n    return combinedMsg;\n}\n\n// Guardar el contexto global\nglobal.set(\"contextoGlobal\", contextoGlobal);\n\nif (return_date) {\n    var ret = {};\n    ret.topic = \"fin\";\n    ret.payload = Date.now();\n    return ret;\n}\n\nreturn null; // No hacer nada si no es \"apply\"\n",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -1226,27 +1226,9 @@
         "y": 240,
         "wires": [
             [
-                "482af6182e0f0975",
                 "44afbffb25d126bf"
             ]
         ]
-    },
-    {
-        "id": "482af6182e0f0975",
-        "type": "debug",
-        "z": "e4bb5e0df95bd7f5",
-        "name": "debug 1",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 540,
-        "y": 260,
-        "wires": []
     },
     {
         "id": "78fe0d74623eb4cb",
