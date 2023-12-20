@@ -293,7 +293,7 @@
         "label": "Temperaturas de Sustrato ºC",
         "chartType": "line",
         "legend": "false",
-        "xformat": "HH:mm:ss",
+        "xformat": "dd HH:mm",
         "interpolate": "linear",
         "nodata": "",
         "dot": false,
